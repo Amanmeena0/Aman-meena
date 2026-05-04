@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 
 export function AboutSection() {
-  const skills = ["Python", "FastAPI", "TensorFlow", "React", "MongoDB", "Generative AI"];
-
+  const skills = ["Python", "Agentic AI", "Machine Learning","Agile Methodologies" , "Version Control (Git)", "SQL", "NoSQL","NLP", "Computer Vision", "Reinforcement Learning", "Data Engineering", "Model Interpretability"];
+  
   return (
     <section className="bg-surface py-32">
       <div className="container mx-auto px-6">
@@ -29,7 +29,7 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-serif mb-8">Empowering progress through purpose.</h2>
             <div className="space-y-6 text-lg text-charcoal/70 leading-relaxed">
               <p>
-                I believe that the greatest challenges of our time can be solved by combining human intuition with machine precision. My journey from economics to AI is driven by a single goal: to build tools that make a difference.
+                I believe growth comes from discomfort, so I consistently push beyond limits, learning faster, thinking deeper, and engineering solutions that stand the test of scale and time.
               </p>
               <p>
                 Every line of code I write and every model I train is a step toward a more efficient, equitable, and intelligent world.

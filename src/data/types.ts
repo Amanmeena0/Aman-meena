@@ -15,6 +15,20 @@ export interface Experience {
   image: string;
 }
 
+export interface Internship {
+  id: number;
+  title: string;
+  company: string;
+  period: string;
+  duration: string;
+  description: string;
+  detailedDescription: string;
+  skills: string[];
+  achievements: string[];
+  image: string;
+  color: string;
+}
+
 export interface ChatMessage {
   role: 'user' | 'ai';
   content: string;

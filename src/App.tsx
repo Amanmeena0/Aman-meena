@@ -1,7 +1,7 @@
 import { FloatingNav } from "@/src/components/Navigation/FloatingNav";
 import { HeroSection } from "@/src/components/Sections/HeroSection";
 import { AboutSection } from "@/src/components/Sections/AboutSection";
-import { ExperienceSection } from "@/src/components/Sections/ExperienceSection";
+import { InternshipsSection } from "@/src/components/Sections/InternshipsSection";
 import { ProjectsSection } from "@/src/components/Sections/ProjectsSection";
 import { ContactSection } from "@/src/components/Sections/ContactSection";
 import { Footer } from "@/src/components/Sections/Footer";
@@ -12,7 +12,7 @@ export default function App() {
       <FloatingNav />
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
+      <InternshipsSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
