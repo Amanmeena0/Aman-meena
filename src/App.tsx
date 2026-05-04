@@ -146,7 +146,7 @@ const ExperienceRow = ({ exp }: { exp: Experience }) => {
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-accent-sage/20 mix-blend-multiply" />
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/60 to-transparent">
             <p className="text-white text-xs leading-relaxed">
               {exp.description}
             </p>
@@ -214,7 +214,7 @@ const ChatWidget = () => {
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="absolute bottom-20 right-0 w-80 md:w-96 glass rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[500px]"
+          className="absolute bottom-20 right-0 w-80 md:w-96 glass rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-125"
         >
           <div className="p-4 bg-accent-terracotta text-white font-serif flex justify-between items-center">
             <span>Aman's AI Assistant</span>
@@ -387,7 +387,7 @@ export default function App() {
                 transition={{ delay: i * 0.1 }}
                 className="group bg-bg rounded-4xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-charcoal/5"
               >
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                <div className="aspect-4/3 rounded-3xl overflow-hidden mb-6 relative">
                   <img 
                     src={project.image} 
                     alt={project.title} 
