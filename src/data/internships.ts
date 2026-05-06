@@ -7,30 +7,32 @@ export const INTERNSHIPS: Internship[] = [
     company: "Accenture",
     period: "December 2025 - Present",
     duration: "4+ months",
-    description: "Developing enterprise-scale AI solutions and optimizing backend microservices for global clients.",
-    detailedDescription: "Working on cutting-edge AI/ML projects involving NLP and computer vision. Optimized microservices reducing latency by 40%. Collaborated with cross-functional teams across 5 countries.",
-    skills: ["Python", "TypeScript", "React", "AWS", "Docker", "Kubernetes", "Machine Learning"],
+    description: "Managed production support tickets in a large-scale enterprise project, improving resolution efficiency and maintaining SLA compliance. Completed comprehensive training across 15+ technologies including Agentic AI, RAG, LangChain, and LangGraph. Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer.",
+    detailedDescription: "Managed production support tickets in a large-scale enterprise project, improving resolution efficiency and maintaining SLA compliance. Completed comprehensive training across 15+ technologies including Agentic AI, RAG, LangChain, and LangGraph. Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer.",
+    skills: ["Python", "TypeScript", "T-SQL", "React", "AWS", "Azure", "Docker", "Kubernetes", "Machine Learning", "Agentic AI", "RAG", "LangChain", "LangGraph", "DevOps", "GitHub", "Prompt Engineering"],
     achievements: [
-      "Reduced API response time by 40% through microservice optimization",
-      "Implemented ML pipeline processing 100K+ records daily",
-      "Led knowledge sharing sessions for 50+ engineers"
+      "Managed production support tickets in large-scale enterprise project, improving resolution efficiency while maintaining SLA compliance",
+      "Completed training across 15+ technologies including Agentic AI, RAG, LangChain, LangGraph, DevOps, AWS, Azure, and ML with hands-on projects",
+      "Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer",
+      "Gained expertise in AI system development, prompt engineering, Python backend, T-SQL, GitHub, and cloud fundamentals"
     ],
     image: "https://picsum.photos/seed/accenture/500/400",
     color: "#6B7A65"
   },
   {
     id: 2,
-    title: "AI Policy Intern",
+    title: "AI Intern",
     company: "DGFT, Ministry of Commerce",
     period: "June 2025 - July 2025",
     duration: "2 months",
-    description: "Analyzed international trade data to identify economic trends and support policy formulation.",
-    detailedDescription: "Conducted quantitative analysis of trade datasets spanning 15 years and 180 countries. Generated insights that influenced tariff negotiations and trade policy recommendations at the national level.",
-    skills: ["Data Analysis", "Python", "R", "SQL", "Economic Modeling", "Report Writing"],
+    description: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM for querying trade policy information.",
+    detailedDescription: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM, achieving 99% response accuracy. Scaled the system to handle 100K+ concurrent requests with high availability and low latency. Integrated APIs and agent workflows to reduce manual effort and improve system efficiency.",
+    skills: ["RAG", "LangChain", "ChromaDB", "Gemini LLM", "Generative AI", "Python", "APIs", "Agent Workflows", "Data Pipelines", "Vector Databases"],
     achievements: [
-      "Analyzed 2.5M+ trade records across 180 countries",
-      "Created predictive models for trade trends with 92% accuracy",
-      "Policy recommendations adopted by ministry officials"
+      "Engineered RAG-based system achieving 99% response accuracy",
+      "Scaled system to handle 100K+ concurrent requests with high availability and low latency",
+      "Integrated APIs and agent workflows to reduce manual effort and improve system efficiency",
+      "Built data pipelines for processing 100+ documents, creating structured knowledge base from unstructured data"
     ],
     image: "https://picsum.photos/seed/dgft/500/400",
     color: "#C2847A"
@@ -39,15 +41,16 @@ export const INTERNSHIPS: Internship[] = [
     id: 3,
     title: "Research Intern",
     company: "DIPR, DRDO",
-    period: "July 2022 - August 2022",
+    period: "July 2024 - August 2024",
     duration: "2 months",
-    description: "Implemented multi-neural network systems for psychological profiling and data-driven decision support.",
-    detailedDescription: "Designed and implemented neural network architectures for behavioral analysis. Conducted research on cognitive patterns and developed decision-support systems used in real-world applications.",
-    skills: ["Deep Learning", "TensorFlow", "Python", "Neural Networks", "Research Methodology", "Data Visualization"],
+    description: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models.",
+    detailedDescription: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models, achieving 57% accuracy on a 10K+ dataset. Improved processing speed by 13% through optimized ML techniques and built robust data pipelines for research-driven insights.",
+    skills: ["Deep Learning", "NLP", "Python", "Facial Expression Analysis", "Voice Analysis", "Neural Networks", "Data Pipelines", "ML Optimization", "Research Methodology"],
     achievements: [
-      "Built multi-neural network models with 59%+ accuracy",
-      "Published research findings in internal technical reports",
-      "System adopted for behavioral analysis and profiling"
+      "Developed multimodal lie detection system using facial expression and voice-based NLP analysis",
+      "Achieved 57% accuracy on 10K+ dataset",
+      "Improved processing speed by 13% through ML optimization",
+      "Prepared and submitted 3+ reports ensuring accuracy and completeness"
     ],
     image: "https://picsum.photos/seed/drdo/500/400",
     color: "#6B7A65"
