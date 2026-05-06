@@ -5,16 +5,18 @@ import { Project } from '@/src/data/types';
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onClick: () => void;
 }
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group bg-bg rounded-4xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-charcoal/5"
+      onClick={onClick}
+      className="group bg-bg rounded-4xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-charcoal/5 cursor-pointer"
     >
       <div className="aspect-4/3 rounded-3xl overflow-hidden mb-6 relative">
         <img 
