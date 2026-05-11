@@ -11,12 +11,10 @@ export const INTERNSHIPS: Internship[] = [
     detailedDescription: "Managed production support tickets in a large-scale enterprise project, improving resolution efficiency and maintaining SLA compliance. Completed comprehensive training across 15+ technologies including Agentic AI, RAG, LangChain, and LangGraph. Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer.",
     skills: ["Python", "TypeScript", "T-SQL", "React", "AWS", "Azure", "Docker", "Kubernetes", "Machine Learning", "Agentic AI", "RAG", "LangChain", "LangGraph", "DevOps", "GitHub", "Prompt Engineering"],
     achievements: [
-      "Managed production support tickets in large-scale enterprise project, improving resolution efficiency while maintaining SLA compliance",
-      "Completed training across 15+ technologies including Agentic AI, RAG, LangChain, LangGraph, DevOps, AWS, Azure, and ML with hands-on projects",
       "Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer",
-      "Gained expertise in AI system development, prompt engineering, Python backend, T-SQL, GitHub, and cloud fundamentals"
+      "Certification in all these fields: Agentic AI, DevOps, Prompt Engineering, etc.",
     ],
-    image: "https://picsum.photos/seed/accenture/500/400",
+    image: "https://www.cio.com/wp-content/uploads/2026/01/4113365-0-48238000-1767730312-shutterstock_2390551643.jpg?quality=50&strip=all&w=1024",
     color: "#6B7A65"
   },
   {
@@ -26,15 +24,13 @@ export const INTERNSHIPS: Internship[] = [
     period: "June 2025 - July 2025",
     duration: "2 months",
     description: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM for querying trade policy information.",
-    detailedDescription: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM, achieving 99% response accuracy. Scaled the system to handle 100K+ concurrent requests with high availability and low latency. Integrated APIs and agent workflows to reduce manual effort and improve system efficiency.",
+    detailedDescription: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM, achieving 70% response accuracy. Scaled the system to handle 1K+ concurrent requests with high availability and low latency. Integrated APIs and agent workflows to reduce manual effort and improve system efficiency.",
     skills: ["RAG", "LangChain", "ChromaDB", "Gemini LLM", "Generative AI", "Python", "APIs", "Agent Workflows", "Data Pipelines", "Vector Databases"],
     achievements: [
-      "Engineered RAG-based system achieving 70% response accuracy",
-      "Scaled system to handle 100K+ concurrent requests with high availability and low latency",
-      "Integrated APIs and agent workflows to reduce manual effort and improve system efficiency",
-      "Built data pipelines for processing 100+ documents, creating structured knowledge base from unstructured data"
+      "Got Recommnedation letter from the ADG of the DGFT for outstanding performance and contribution to the project",
+      "Achieved the highest accuracy among all interns in the project with 70% response accuracy",
     ],
-    image: "https://picsum.photos/seed/dgft/500/400",
+    image: "https://www.dgft.gov.in/CP/images/img/dgft.jpg",
     color: "#C2847A"
   },
   {
@@ -47,12 +43,10 @@ export const INTERNSHIPS: Internship[] = [
     detailedDescription: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models, achieving 57% accuracy on a 1K+ dataset. Improved processing speed by 13% through optimized ML techniques and built robust data pipelines for research-driven insights.",
     skills: ["Deep Learning", "NLP", "Python", "Facial Expression Analysis", "Voice Analysis", "Neural Networks", "Data Pipelines", "ML Optimization", "Research Methodology"],
     achievements: [
-      "Developed multimodal lie detection system using facial expression and voice-based NLP analysis",
-      "Achieved 57% accuracy on 10K+ dataset",
-      "Improved processing speed by 13% through ML optimization",
-      "Prepared and submitted 3+ reports ensuring accuracy and completeness"
+      "Published research paper in the Journal of Multimodal Lie Detection based on the project work",
+      "Get special recognition from the Director of DIPR for innovative approach and significant contribution to the research project",
     ],
-    image: "https://picsum.photos/seed/drdo/500/400",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3PiPF7o3pz33WYkGCwK6RE8chQmHaEAoB6g&s",
     color: "#6B7A65"
   },
 ];
