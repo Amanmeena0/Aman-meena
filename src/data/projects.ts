@@ -33,4 +33,20 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Amanmeena0/Safe-sphere",
     image: "https://picsum.photos/seed/crime/800/600"
   },
+  {
+    title:"TripFlow - Smart Trip Planner",
+    description: "A smart trip planning application that uses AI to generate personalized itineraries based on user preferences and real-time data.",
+    why: "I built this to simplify travel planning and provide users with tailored recommendations for a seamless travel experience.",
+    tags: ["Python", "ADK", "FastAPI", "Next.js", "LLM", "Gemini", "A2A"],
+    link: "https://github.com/Amanmeena0/Next-Trip",
+    image: "https://picsum.photos/seed/trip/800/600"
+  },
+  {
+    title:"FunRe - Modern Resume Builder",
+    description: "A modern resume builder that uses Custimized resume templates to help users create Cozy and fun resumes with ease.", 
+    why: "I built this to provide a simple and enjoyable way for users to create professional resumes.",
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase", "Vercel"],
+    link: "https://github.com/Amanmeena0/FunRe",
+    image: "https://picsum.photos/seed/resume/800/600"  
+  }
 ];

@@ -43,15 +43,15 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
           {/* Top - Tag */}
           <div className="flex justify-between items-start">
             <div 
-              className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-widest text-white/90 glass"
+              className="px-3 py-1 rounded-full text-xs font-bold font-mono uppercase tracking-widest text-white glass"
               style={{ 
-                backgroundColor: internship.color + '20',
-                borderColor: internship.color + '40'
+                backgroundColor: internship.color + '80', // Increased opacity to 50% (80 in hex)
+                borderColor: internship.color
               }}
             >
               {internship.company}
             </div>
-            <div className="text-white/70 text-xs font-mono">{internship.period}</div>
+            <div className="text-white font-bold text-xs font-mono drop-shadow-md">{internship.period}</div>
           </div>
 
           {/* Bottom - Main Info */}
@@ -140,10 +140,10 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
                   {/* Header */}
                   <div className="mb-8">
                     <div 
-                      className="inline-block px-4 py-2 rounded-full text-xs font-mono uppercase tracking-widest mb-4"
+                      className="inline-block px-4 py-2 rounded-full text-xs font-bold font-mono uppercase tracking-widest mb-4"
                       style={{ 
-                        backgroundColor: internship.color + '20',
-                        color: internship.color
+                        backgroundColor: internship.color,
+                        color: 'white'
                       }}
                     >
                       {internship.company}
@@ -151,7 +151,7 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
                     <h2 className="text-3xl md:text-4xl font-serif text-charcoal mb-2">
                       {internship.title}
                     </h2>
-                    <p className="text-charcoal/60 text-lg font-mono">{internship.period}</p>
+                    <p className="text-charcoal font-bold text-lg font-mono">{internship.period}</p>
                   </div>
 
                   {/* Quick Stats */}
