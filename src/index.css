@@ -15,9 +15,19 @@
   --radius-4xl: 2rem;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
+  .dark {
+    --color-bg: #121212;
+    --color-surface: #1E1E1E;
+    --color-charcoal: #E0E0E0;
+    --color-accent-sage: #8FA189;
+    --color-accent-terracotta: #D29A91;
+  }
+
   body {
-    @apply bg-bg text-charcoal font-sans selection:bg-accent-terracotta/20;
+    @apply bg-bg text-charcoal font-sans transition-colors duration-300 selection:bg-accent-terracotta/20;
   }
 
   h1, h2, h3, h4 {
@@ -42,7 +52,11 @@
 }
 
 .glass {
-  @apply bg-white/40 backdrop-blur-md border border-white/20;
+  @apply bg-white/40 backdrop-blur-md border border-white/20 transition-colors duration-300;
+}
+
+.dark .glass {
+  @apply bg-charcoal/10 border-white/5;
 }
 
 .markdown-body p {

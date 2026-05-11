@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     description: "An AI-driven platform that analyzes real-time market data to provide actionable insights and predictions for entrepreneurs and investors.",
     why: "I built this to empower entrepreneurs and investors with data-driven insights, helping them make informed decisions in a rapidly changing market landscape.",
     tags: ["Python", "LangChain", "FastAPI", "Next.js", "LLM", "Hugging Face",] ,
-    link: "https://github.com/Amanmeena0/MarketScout",
+    link: "https://market-scout-snowy.vercel.app/",
     image: "https://picsum.photos/seed/market/800/600"
   },
   {

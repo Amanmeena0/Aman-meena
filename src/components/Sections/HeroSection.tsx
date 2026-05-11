@@ -27,7 +27,7 @@ export function HeroSection() {
             href="#work"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-charcoal text-white rounded-full font-medium flex items-center gap-2 shadow-lg shadow-charcoal/10"
+            className="px-8 py-4 bg-charcoal text-bg rounded-full font-medium flex items-center gap-2 shadow-lg shadow-charcoal/10"
           >
             View My Work <ArrowRight size={18} />
           </motion.a>

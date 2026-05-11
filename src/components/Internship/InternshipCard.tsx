@@ -102,7 +102,7 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed inset-4 md:inset-8 lg:inset-12 bg-white rounded-3xl overflow-hidden z-50 flex flex-col"
+              className="fixed inset-4 md:inset-8 lg:inset-12 bg-bg rounded-3xl overflow-hidden z-50 flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
