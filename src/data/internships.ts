@@ -29,7 +29,7 @@ export const INTERNSHIPS: Internship[] = [
     detailedDescription: "Engineered a RAG-based system using LangChain, ChromaDB, and Gemini LLM, achieving 99% response accuracy. Scaled the system to handle 100K+ concurrent requests with high availability and low latency. Integrated APIs and agent workflows to reduce manual effort and improve system efficiency.",
     skills: ["RAG", "LangChain", "ChromaDB", "Gemini LLM", "Generative AI", "Python", "APIs", "Agent Workflows", "Data Pipelines", "Vector Databases"],
     achievements: [
-      "Engineered RAG-based system achieving 99% response accuracy",
+      "Engineered RAG-based system achieving 70% response accuracy",
       "Scaled system to handle 100K+ concurrent requests with high availability and low latency",
       "Integrated APIs and agent workflows to reduce manual effort and improve system efficiency",
       "Built data pipelines for processing 100+ documents, creating structured knowledge base from unstructured data"
@@ -44,7 +44,7 @@ export const INTERNSHIPS: Internship[] = [
     period: "July 2024 - August 2024",
     duration: "2 months",
     description: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models.",
-    detailedDescription: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models, achieving 57% accuracy on a 10K+ dataset. Improved processing speed by 13% through optimized ML techniques and built robust data pipelines for research-driven insights.",
+    detailedDescription: "Developed a multimodal lie detection system using facial expression analysis and voice-based NLP models, achieving 57% accuracy on a 1K+ dataset. Improved processing speed by 13% through optimized ML techniques and built robust data pipelines for research-driven insights.",
     skills: ["Deep Learning", "NLP", "Python", "Facial Expression Analysis", "Voice Analysis", "Neural Networks", "Data Pipelines", "ML Optimization", "Research Methodology"],
     achievements: [
       "Developed multimodal lie detection system using facial expression and voice-based NLP analysis",

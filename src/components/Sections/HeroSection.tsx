@@ -6,12 +6,12 @@ export function HeroSection() {
   const greeting = useGreeting();
 
   return (
-    <section id="home" className="container mx-auto px-6 pt-32 pb-20 min-h-[80vh] flex flex-col justify-center">
+    <section id="home" className="relative container mx-auto px-6 pt-32 pb-20 min-h-[80vh] flex flex-col justify-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-4xl"
+        className="max-w-4xl z-10"
       >
         <span className="text-accent-terracotta font-medium tracking-widest uppercase text-sm mb-6 block">
           {greeting}, I'm Aman
@@ -39,6 +39,18 @@ export function HeroSection() {
               <Linkedin size={20} />
             </a>
           </div>
+        </div>
+      </motion.div>
+
+      {/* Decorative Name */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute right-36 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none select-none opacity-[0.03]"
+      >
+        <div className="text-[20rem] font-serif [writing-mode:vertical-rl] text-charcoal leading-none">
+          安缦
         </div>
       </motion.div>
     </section>
