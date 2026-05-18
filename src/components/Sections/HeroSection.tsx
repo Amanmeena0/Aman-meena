@@ -16,7 +16,7 @@ export function HeroSection() {
         <span className="text-accent-terracotta font-medium tracking-widest uppercase text-sm mb-6 block">
           {greeting}, I'm Aman
         </span>
-        <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] text-charcoal mb-8 motivational-glow">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] text-charcoal mb-8 motivational-glow">
           Building a <span className="italic text-accent-sage">smarter future</span> through data and empathy.
         </h1>
         <p className="text-xl md:text-2xl text-charcoal/60 leading-relaxed max-w-2xl mb-12">
@@ -47,9 +47,9 @@ export function HeroSection() {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="absolute right-36 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none select-none opacity-[0.03]"
+        className="relative mt-10 xl:absolute xl:right-10 2xl:right-26 xl:top-1/2 xl:-translate-y-1/2 pointer-events-none select-none opacity-[0.02] xl:opacity-[0.03] flex justify-center xl:block"
       >
-        <div className="text-[20rem] font-serif [writing-mode:vertical-rl] text-charcoal leading-none">
+        <div className="text-[7rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] xl:text-[19rem] 2xl:text-[20rem] font-serif [writing-mode:horizontal-tb] xl:[writing-mode:vertical-rl] text-charcoal leading-none">
           安缦
         </div>
       </motion.div>
