@@ -102,7 +102,7 @@ export function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-accent-terracotta text-white rounded-xl hover:bg-accent-terracotta/90 transition-colors font-medium"
                   >
-                    View Project
+                    Github
                     <ExternalLink size={18} />
                   </a>
                 )}

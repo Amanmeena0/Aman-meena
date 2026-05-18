@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, MailCheckIcon } from 'lucide-react';
 import { useGreeting } from '@/src/hooks/useGreeting';
 
 export function HeroSection() {
@@ -32,11 +32,14 @@ export function HeroSection() {
             View My Work <ArrowRight size={18} />
           </motion.a>
           <div className="flex items-center gap-4">
-            <a href="#" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
+            <a href="https://github.com/Amanmeena0" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
               <Github size={20} />
             </a>
-            <a href="#" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
+            <a href="www.linkedin.com/in/aman-meena-11326a395" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
               <Linkedin size={20} />
+            </a>
+            <a href="mailto:meenaaman581@gmail.com" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
+              <MailCheckIcon size={20} />
             </a>
           </div>
         </div>
