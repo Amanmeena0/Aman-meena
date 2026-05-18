@@ -4,6 +4,7 @@ export interface Project {
   why: string;
   tags: string[];
   link: string;
+  github?: string;
   image: string;
 }
 

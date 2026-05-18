@@ -31,21 +31,7 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
           </div>
         </div>
       </div>
-      <h3 className="text-2xl font-serif mb-3">{project.title}</h3>
-      <p className="text-charcoal/60 text-sm mb-4 leading-relaxed">
-        {project.description}
-      </p>
-      <div className="bg-surface/50 p-4 rounded-2xl mb-6">
-        <p className="text-xs font-medium text-accent-terracotta uppercase tracking-wider mb-1">Why I built this</p>
-        <p className="text-sm text-charcoal/80 italic">{project.why}</p>
-      </div>
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map(tag => (
-          <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-charcoal/40 px-2 py-1 bg-surface rounded-md">
-            {tag}
-          </span>
-        ))}
-      </div>
+      <h3 className="text-2xl font-serif text-center">{project.title}</h3>
     </motion.div>
   );
 }

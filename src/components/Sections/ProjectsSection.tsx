@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, Github } from 'lucide-react';
 import { PROJECTS } from '@/src/data/projects';
 import { ProjectCard } from '../Projects/ProjectCard';
 import type { Project } from '@/src/data/types';
@@ -39,7 +39,7 @@ export function ProjectsSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-bg rounded-4xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="bg-bg rounded-4xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
             >
               {/* Close Button */}
               <button
@@ -94,18 +94,31 @@ export function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* View Project Button */}
-                {selectedProject.link && selectedProject.link !== "#" && (
-                  <a
-                    href={selectedProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent-terracotta text-white rounded-xl hover:bg-accent-terracotta/90 transition-colors font-medium"
-                  >
-                    Github
-                    <ExternalLink size={18} />
-                  </a>
-                )}
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-4">
+                  {selectedProject.link && selectedProject.link !== "#" && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-accent-terracotta text-bg rounded-xl hover:bg-accent-terracotta/90 transition-colors font-medium"
+                    >
+                      View Project
+                      <ExternalLink size={18} />
+                    </a>
+                  )}
+                  {selectedProject.github && (
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-bg rounded-xl hover:bg-charcoal/80 transition-colors font-medium"
+                    >
+                      Source Code
+                      <Github size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           </motion.div>

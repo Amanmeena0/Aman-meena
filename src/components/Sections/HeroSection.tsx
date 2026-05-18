@@ -35,9 +35,9 @@ export function HeroSection() {
             <a href="https://github.com/Amanmeena0" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
               <Github size={20} />
             </a>
-            <a href="www.linkedin.com/in/aman-meena-11326a395" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
+            <a href="https://www.linkedin.com/in/aman-meena-11326a395" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
               <Linkedin size={20} />
-            </a>
+            </a>  
             <a href="mailto:meenaaman581@gmail.com" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
               <MailCheckIcon size={20} />
             </a>
