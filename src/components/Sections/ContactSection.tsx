@@ -16,7 +16,7 @@ export function ContactSection() {
             Whether it's a complex data problem or a new AI initiative, I'm always open to discussing how we can create impact.
           </p>
           <a 
-            href="meenaaman581@gmail.com" 
+            href="Https://drive.google.com/file/d/1E3PMhTYSZ6yYq9GZwEFREieSGGjn-PFf/view?usp=drivesdk" 
             className="inline-flex items-center gap-3 text-2xl md:text-4xl font-serif text-accent-terracotta hover:text-accent-sage transition-colors group"
           >
             hello@aman.dev
