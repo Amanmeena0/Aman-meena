@@ -54,5 +54,14 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/Amanmeena0/FunRe",
     github: "#",
     image: "https://picsum.photos/seed/resume/800/600"  
+  },
+  {
+    title:"Botanical Merge | Blend Your Vision",
+    description: "An AI-powered image blending tool that allows users to merge two images into a unique creation using advanced algorithms.",
+    why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
+    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
+    link: "https://github.com/Amanmeena0/Art_style",
+    github: "#",
+    image: "https://picsum.photos/seed/botanical/800/600"
   }
 ];
