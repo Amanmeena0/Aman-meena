@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     tags: ["Python", "LangChain", "FastAPI", "Next.js", "LLM", "Hugging Face",] ,
     link: "https://market-scout-snowy.vercel.app/",
     github: "https://github.com/Amanmeena0/MarketScout",
-    image: "https://picsum.photos/seed/market/800/600"
+    image: "https://drive.google.com/file/d/1Q63v0lE0PZKXL3nPlLXDXfKL92MbvRc5/view?usp=sharing"
   },
   {
     title: "EduMantri: AI-Powered Educational Assistant",
