@@ -29,13 +29,13 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/crime/800/600"
   },
   {
-    title:"TripFlow - Smart Trip Planner",
+    title:"Skky - Smart Trip Planner",
     description: "A smart trip planning application that uses AI to generate personalized itineraries based on user preferences and real-time data.",
     why: "I built this to simplify travel planning and provide users with tailored recommendations for a seamless travel experience.",
     tags: ["Python", "ADK", "FastAPI", "Next.js", "LLM", "Gemini", "A2A"],
     link: "https://next-trip-ebon.vercel.app/",
-    github: "https://github.com/Amanmeena0/Next-Trip",
-    image: "https://picsum.photos/seed/trip/800/600"
+    github: "https://github.com/Amanmeena0/Skky",
+    image: "https://drive.google.com/file/d/1J0zKu3I8YP5K4kvBQ7jr8q_UkaXEWP8j/view?usp=sharing"
   },
   {
     title:"FunRe - Modern Resume Builder",
@@ -51,9 +51,9 @@ export const PROJECTS: Project[] = [
     description: "An AI-powered image blending tool that allows users to merge two images into a unique creation using advanced algorithms.",
     why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
     tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
-    link: "https://art-style.vercel.app/",
+    link: "https://botanical-merge.vercel.app/",
     github: "https://github.com/Amanmeena0/Botanical_Merge",
-    image: "https://picsum.photos/seed/botanical/800/600"
+    image: "https://drive.google.com/file/d/1iD5eDpsCcFqQ4Np2YAc5ArRcJsgp4SS5/view?usp=sharing"
   },
   {
     title: "RevuMind - Multimodel Product Review Intelligence System",

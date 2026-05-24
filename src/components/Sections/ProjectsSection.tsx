@@ -4,6 +4,7 @@ import { X, ExternalLink, Github } from 'lucide-react';
 import { PROJECTS } from '@/src/data/projects';
 import { ProjectCard } from '../Projects/ProjectCard';
 import type { Project } from '@/src/data/types';
+import { isVideo, getEmbedUrl } from '@/src/lib/utils';
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -49,14 +50,24 @@ export function ProjectsSection() {
                 <X size={24} className="text-charcoal" />
               </button>
 
-              {/* Image */}
+              {/* Image/Video */}
               <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-4xl">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
+                {isVideo(selectedProject.image) ? (
+                  <iframe
+                    src={getEmbedUrl(selectedProject.image)}
+                    className="w-full h-full border-0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title={selectedProject.title}
+                  />
+                ) : (
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
               </div>
 
               {/* Content */}
