@@ -47,12 +47,12 @@ export function HeroSection() {
 
       {/* Decorative Name */}
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative mt-10 xl:absolute xl:right-10 2xl:right-26 xl:top-1/2 xl:-translate-y-1/2 pointer-events-none select-none opacity-[0.02] xl:opacity-[0.03] flex justify-center xl:block"
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="relative mt-12 lg:absolute lg:mt-0 lg:right-4 xl:right-8 lg:top-1/2 lg:-translate-y-1/2 pointer-events-none select-none opacity-[0.03] lg:opacity-[0.04] flex justify-center lg:block z-0"
       >
-        <div className="text-[7rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] xl:text-[19rem] 2xl:text-[20rem] font-serif [writing-mode:horizontal-tb] xl:[writing-mode:vertical-rl] text-charcoal leading-none">
+        <div className="text-[6rem] sm:text-[9rem] md:text-[12rem] lg:text-[15rem] xl:text-[20rem] font-serif [writing-mode:horizontal-tb] lg:[writing-mode:vertical-rl] text-charcoal leading-none">
           安缦
         </div>
       </motion.div>
