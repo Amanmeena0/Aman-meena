@@ -64,4 +64,13 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Amanmeena0/RevuMind",
     image: "https://picsum.photos/seed/neural/800/600"
   },
+  {
+    title: "Convincesence - Online Coach", 
+    description: "ConvinceSense is a real-time conversational engagement detection system that analyzes sales calls to output a convincingness score (1–5) based on acoustic features, speech recognition, and NLP sentiment analysis.",
+    why: "I built this to help sales professionals improve their communication skills and increase their chances of success in sales interactions.",
+    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
+    link: "#",
+    github: "https://github.com/Amanmeena0/convincesence-update",
+    image: "https://picsum.photos/seed/sales/800/600"
+  }
 ];
