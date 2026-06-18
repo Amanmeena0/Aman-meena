@@ -3,15 +3,15 @@ import { ArrowRight, Mail, Github, Linkedin, Globe, MailCheckIcon, MailCheck } f
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-32 bg-surface/30">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <section id="contact" className="py-16 sm:py-24 md:py-32 bg-surface/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-serif mb-8 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif mb-6 sm:mb-8 leading-tight">
               Let's build something <span className="italic text-accent-sage">meaningful</span> together.
             </h2>
             <p className="text-xl text-charcoal/60 mb-12 max-w-lg">
@@ -35,7 +35,7 @@ export function ContactSection() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-bg rounded-4xl p-10 md:p-16 shadow-xl shadow-charcoal/5"
+            className="bg-bg rounded-4xl p-8 sm:p-10 md:p-16 shadow-xl shadow-charcoal/5"
           >
             <h3 className="text-2xl font-serif mb-8">Connect with me</h3>
             <div className="grid gap-6">

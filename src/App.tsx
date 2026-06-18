@@ -5,6 +5,7 @@ import { InternshipsSection } from "@/src/components/Sections/InternshipsSection
 import { ProjectsSection } from "@/src/components/Sections/ProjectsSection";
 import { ContactSection } from "@/src/components/Sections/ContactSection";
 import { Footer } from "@/src/components/Sections/Footer";
+import { SkillsSection } from "@/src/components/Sections/SkillsSection";
 export default function App() {
   return (
     <div className="min-h-screen selection:bg-accent-terracotta/20">
@@ -12,6 +13,7 @@ export default function App() {
       <FloatingNav />
       <HeroSection />
       <AboutSection />
+      <SkillsSection />
       <InternshipsSection />
       <ProjectsSection />
       <ContactSection />

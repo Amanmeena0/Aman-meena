@@ -120,7 +120,7 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="lg:w-1/2 relative overflow-hidden"
+                  className="lg:w-1/2 min-h-48 sm:min-h-64 lg:min-h-0 relative overflow-hidden flex-shrink-0"
                 >
                   <img
                     src={internship.image}
@@ -135,7 +135,7 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="lg:w-1/2 p-8 md:p-12 overflow-y-auto"
+                  className="lg:w-1/2 p-6 sm:p-8 md:p-12 overflow-y-auto"
                 >
                   {/* Header */}
                   <div className="mb-8">

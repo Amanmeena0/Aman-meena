@@ -6,7 +6,7 @@ export function HeroSection() {
   const greeting = useGreeting();
 
   return (
-    <section id="home" className="relative container mx-auto px-6 pt-32 pb-20 min-h-[80vh] flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20 min-h-[80vh] flex flex-col justify-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ export function HeroSection() {
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] text-charcoal mb-8 motivational-glow">
           Building a <span className="italic text-accent-sage">smarter future</span> through data and empathy.
         </h1>
-        <p className="text-xl md:text-2xl text-charcoal/60 leading-relaxed max-w-2xl mb-12">
+        <p className="text-base sm:text-xl md:text-2xl text-charcoal/60 leading-relaxed max-w-2xl mb-10 sm:mb-12">
           I believe every data point tells a story. My mission is to translate those stories into intelligent systems that drive progress and inspire change.
         </p>
         <div className="flex flex-wrap gap-6">
@@ -50,7 +50,7 @@ export function HeroSection() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative mt-12 lg:absolute lg:mt-0 lg:right-4 xl:right-8 lg:top-1/2 lg:-translate-y-1/2 pointer-events-none select-none opacity-[0.03] lg:opacity-[0.04] flex justify-center lg:block z-0"
+        className="relative mt-10 lg:absolute lg:mt-0 lg:right-4 xl:right-8 lg:top-1/2 lg:-translate-y-1/2 pointer-events-none select-none opacity-[0.03] lg:opacity-[0.04] hidden sm:flex justify-center lg:block z-0"
       >
         <div className="text-[6rem] sm:text-[9rem] md:text-[12rem] lg:text-[15rem] xl:text-[20rem] font-serif [writing-mode:horizontal-tb] lg:[writing-mode:vertical-rl] text-charcoal leading-none">
           安缦

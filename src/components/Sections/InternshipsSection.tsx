@@ -3,12 +3,12 @@ import { InternshipCard } from '../Internship/InternshipCard';
 
 export function InternshipsSection() {
   return (
-    <section id="work" className="py-32 bg-surface/30">
-      <div className="container mx-auto px-6">
+    <section id="work" className="py-16 sm:py-24 md:py-32 bg-surface/30">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 md:mb-20 gap-4 sm:gap-6">
           <div>
-            <h2 className="text-4xl md:text-6xl font-serif text-charcoal mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-charcoal mb-3 sm:mb-4">
               Internships
             </h2>
             <p className="text-charcoal/60 font-mono text-sm">

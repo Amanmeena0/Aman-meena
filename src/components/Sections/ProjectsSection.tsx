@@ -10,9 +10,9 @@ export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-32 bg-surface/50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-6xl font-serif mb-20">Selected Projects</h2>
+    <section id="projects" className="py-16 sm:py-24 md:py-32 bg-surface/50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif mb-10 sm:mb-16 md:mb-20">Selected Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS.map((project, i) => (
             <ProjectCard 
@@ -63,7 +63,7 @@ export function ProjectsSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 md:p-10">
+              <div className="p-6 sm:p-8 md:p-10">
                 <h2 className="text-3xl md:text-4xl font-serif mb-4">{selectedProject.title}</h2>
 
                 <p className="text-charcoal/70 text-lg mb-6 leading-relaxed">
