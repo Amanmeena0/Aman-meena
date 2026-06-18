@@ -11,15 +11,6 @@ export const PROJECTS: Project[] = [
     image: "https://drive.google.com/file/d/1Q63v0lE0PZKXL3nPlLXDXfKL92MbvRc5/view?usp=sharing"
   },
   {
-    title: "EduMantri: AI-Powered Educational Assistant",
-    description: "An AI assistant that provides personalized educational guidance and resources from knowledge bases based on user queries.",
-    why: "I built this to democratize access to quality educational resources and empower learners with personalized guidance.",
-    tags: ["Agentic AI","Python","LangChain", "A2A", "MCP", "Next.js","LLM","Hugging Face",],
-    link: "#",
-    github: "https://github.com/Amanmeena0/EduMantri",
-    image: "https://picsum.photos/seed/policy/800/600"
-  },
-  {
     title: "SafeSphere - Crime Awareness Platform",
     description: "Engineered a full-stack platform using React.js and Flask for real-time crime monitoring, SOS alerts, and FIR registration. Implemented data visualization using structured datasets to generate actionable insights.",
     why: "I built this to enhance community safety by providing timely and relevant information about crime incidents and preventive measures.",
@@ -38,15 +29,6 @@ export const PROJECTS: Project[] = [
     image: "https://drive.google.com/file/d/1J0zKu3I8YP5K4kvBQ7jr8q_UkaXEWP8j/view?usp=sharing"
   },
   {
-    title:"FunRe - Modern Resume Builder",
-    description: "A modern resume builder that uses Custimized resume templates to help users create Cozy and fun resumes with ease.", 
-    why: "I built this to provide a simple and enjoyable way for users to create professional resumes.",
-    tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase", "Vercel"],
-    link: "#",
-    github: "https://github.com/Amanmeena0/FunRe",
-    image: "https://picsum.photos/seed/resume/800/600"  
-  },
-  {
     title:"Botanical Merge | Blend Your Vision",
     description: "An AI-powered image blending tool that allows users to merge two images into a unique creation using advanced algorithms.",
     why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
@@ -54,6 +36,24 @@ export const PROJECTS: Project[] = [
     link: "https://botanical-merge.vercel.app/",
     github: "https://github.com/Amanmeena0/Botanical_Merge",
     image: "https://drive.google.com/file/d/1iD5eDpsCcFqQ4Np2YAc5ArRcJsgp4SS5/view?usp=sharing"
+  },
+  {
+    title: "EduMantri: AI-Powered Educational Assistant",
+    description: "An AI assistant that provides personalized educational guidance and resources from knowledge bases based on user queries.",
+    why: "I built this to democratize access to quality educational resources and empower learners with personalized guidance.",
+    tags: ["Agentic AI","Python","LangChain", "A2A", "MCP", "Next.js","LLM","Hugging Face",],
+    link: "#",
+    github: "https://github.com/Amanmeena0/EduMantri",
+    image: "https://picsum.photos/seed/policy/800/600"
+  },
+  {
+      title:"FunRe - Modern Resume Builder",
+      description: "A modern resume builder that uses Custimized resume templates to help users create Cozy and fun resumes with ease.", 
+      why: "I built this to provide a simple and enjoyable way for users to create professional resumes.",
+      tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase", "Vercel"],
+      link: "#",
+      github: "https://github.com/Amanmeena0/FunRe",
+      image: "https://picsum.photos/seed/resume/800/600"  
   },
   {
     title: "RevuMind - Multimodel Product Review Intelligence System",
