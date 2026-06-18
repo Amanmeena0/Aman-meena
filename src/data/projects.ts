@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     description: "Engineered a full-stack platform using React.js and Flask for real-time crime monitoring, SOS alerts, and FIR registration. Implemented data visualization using structured datasets to generate actionable insights.",
     why: "I built this to enhance community safety by providing timely and relevant information about crime incidents and preventive measures.",
     tags: ["Python", "React.js", "Data Visualization", "GIS", "Data Analysis", "Web Development","Flask","SQLite"],
-    link: "safe-sphere-ui.vercel.app/",
+    link: "https://safe-sphere-ui.vercel.app",
     github: "https://github.com/Amanmeena0/SafeSphere-client",
     image: "https://drive.google.com/file/d/1nFvpk55UffajdAmAUovbwHh1WHamaFSq/view?usp=sharing"
   },
