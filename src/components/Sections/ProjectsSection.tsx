@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { PROJECTS } from '@/src/data/projects';
 import { ProjectCard } from '../Projects/ProjectCard';
 import type { Project } from '@/src/data/types';
@@ -42,24 +42,16 @@ export function ProjectsSection() {
               onClick={(e) => e.stopPropagation()}
               className="bg-bg rounded-4xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-6 z-10 p-2 hover:bg-surface rounded-full transition-colors"
-              >
-                <X size={24} className="text-charcoal" />
-              </button>
-
               {/* Image/Video */}
-              <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-4xl">
+              <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-4xl relative">
                 {isVideo(selectedProject.image) ? (
                   <iframe
-                    src={getEmbedUrl(selectedProject.image)}
-                    className="w-full h-full border-0"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    title={selectedProject.title}
-                  />
+                      src={getEmbedUrl(selectedProject.image)}
+                      className="w-full h-full border-0"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      title={selectedProject.title}
+                    />
                 ) : (
                   <img
                     src={selectedProject.image}

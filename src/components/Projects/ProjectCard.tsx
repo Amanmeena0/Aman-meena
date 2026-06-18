@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ExternalLink, X } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Project } from '@/src/data/types';
 import { isVideo, getEmbedUrl } from '@/src/lib/utils';
 
@@ -41,13 +41,7 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
             referrerPolicy="no-referrer"
           />
         )}
-        {isVideoContent ? (
-          <div className="absolute top-4 left-4">
-            <div className="glass p-2 rounded-full text-charcoal">
-              <X size={18} />
-            </div>
-          </div>
-        ) : (
+        {!isVideoContent && (
           <div className="absolute top-4 right-4">
             <div className="glass p-2 rounded-full text-charcoal">
               <ExternalLink size={18} />
