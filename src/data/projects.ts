@@ -24,9 +24,9 @@ export const PROJECTS: Project[] = [
     description: "Engineered a full-stack platform using React.js and Flask for real-time crime monitoring, SOS alerts, and FIR registration. Implemented data visualization using structured datasets to generate actionable insights.",
     why: "I built this to enhance community safety by providing timely and relevant information about crime incidents and preventive measures.",
     tags: ["Python", "React.js", "Data Visualization", "GIS", "Data Analysis", "Web Development","Flask","SQLite"],
-    link: "https://safe-sphere-pi.vercel.app/",
-    github: "https://github.com/Amanmeena0/Safe-sphere",
-    image: "https://picsum.photos/seed/crime/800/600"
+    link: "safe-sphere-ui.vercel.app/",
+    github: "https://github.com/Amanmeena0/SafeSphere-client",
+    image: "https://drive.google.com/file/d/1nFvpk55UffajdAmAUovbwHh1WHamaFSq/view?usp=sharing"
   },
   {
     title:"Skky - Smart Trip Planner",
