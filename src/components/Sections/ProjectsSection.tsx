@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Github } from 'lucide-react';
+import { X, Github } from 'lucide-react';
 import { PROJECTS } from '@/src/data/projects';
 import { ProjectCard } from '../Projects/ProjectCard';
 import type { Project } from '@/src/data/types';
@@ -115,7 +115,6 @@ export function ProjectsSection() {
                       className="inline-flex items-center gap-2 px-6 py-3 bg-accent-terracotta text-bg rounded-xl hover:bg-accent-terracotta/90 transition-colors font-medium"
                     >
                       View Project
-                      <ExternalLink size={18} />
                     </a>
                   )}
                   {selectedProject.github && (
