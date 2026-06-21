@@ -38,6 +38,15 @@ export const PROJECTS: Project[] = [
     image: "https://drive.google.com/file/d/1iD5eDpsCcFqQ4Np2YAc5ArRcJsgp4SS5/view?usp=sharing"
   },
   {
+    title: "RevuMind - Multimodel Product Review Intelligence System",
+    description: "An AI system that synthesizes product reviews across platforms to provide comprehensive insights.",
+    why: "I built this to help consumers make informed decisions by distilling vast amounts of review data into actionable insights.",
+    tags: ["Python", "PyTorch", "Scikit-learn", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
+    link: "#",
+    github: "https://github.com/Amanmeena0/RevuMind",
+    image: "https://drive.google.com/file/d/1g_yZMZDtkNCLxxv8shuQD1Chg_1cTxel/view?usp=sharing"
+  },
+  {
     title: "EduMantri: AI-Powered Educational Assistant",
     description: "An AI assistant that provides personalized educational guidance and resources from knowledge bases based on user queries.",
     why: "I built this to democratize access to quality educational resources and empower learners with personalized guidance.",
@@ -54,15 +63,6 @@ export const PROJECTS: Project[] = [
       link: "#",
       github: "https://github.com/Amanmeena0/FunRe",
       image: "https://picsum.photos/seed/resume/800/600"  
-  },
-  {
-    title: "RevuMind - Multimodel Product Review Intelligence System",
-    description: "An AI system that synthesizes product reviews across platforms to provide comprehensive insights.",
-    why: "I built this to help consumers make informed decisions by distilling vast amounts of review data into actionable insights.",
-    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
-    link: "#",
-    github: "https://github.com/Amanmeena0/RevuMind",
-    image: "https://picsum.photos/seed/neural/800/600"
   },
   {
     title: "Convincesence - Online Coach", 
