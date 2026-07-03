@@ -2,15 +2,6 @@ import { Project } from './types';
 
 export const PROJECTS: Project[] = [
   {
-    title: "MarketScout - AI Market Analysis Platform",
-    description: "An AI-driven platform that analyzes real-time market data to provide actionable insights and predictions for entrepreneurs and investors.",
-    why: "I built this to empower entrepreneurs and investors with data-driven insights, helping them make informed decisions in a rapidly changing market landscape.",
-    tags: ["Python", "LangChain", "FastAPI", "Next.js", "LLM", "Hugging Face",] ,
-    link: "https://market-scout-snowy.vercel.app/",
-    github: "https://github.com/Amanmeena0/MarketScout",
-    image: "https://drive.google.com/file/d/1Q63v0lE0PZKXL3nPlLXDXfKL92MbvRc5/view?usp=sharing"
-  },
-  {
     title: "SafeSphere - Crime Awareness Platform",
     description: "Engineered a full-stack platform using React.js and Flask for real-time crime monitoring, SOS alerts, and FIR registration. Implemented data visualization using structured datasets to generate actionable insights.",
     why: "I built this to enhance community safety by providing timely and relevant information about crime incidents and preventive measures.",
@@ -18,6 +9,24 @@ export const PROJECTS: Project[] = [
     link: "https://safe-sphere-ui.vercel.app",
     github: "https://github.com/Amanmeena0/SafeSphere-client",
     image: "https://drive.google.com/file/d/1nFvpk55UffajdAmAUovbwHh1WHamaFSq/view?usp=sharing"
+  },
+  {
+    title: "Talklytics - Real-time Conversational Engagement Detection System", 
+    description: "ConvinceSense is a real-time conversational engagement detection system that analyzes sales calls to output a convincingness score (1–5) based on acoustic features, speech recognition, and NLP sentiment analysis.",
+    why: "I built this to help sales professionals improve their communication skills and increase their chances of success in sales interactions.",
+    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
+    link: "https://conviciesense-mic.vercel.app/",
+    github: "https://github.com/Amanmeena0/Talklytics-update",
+    image: "https://drive.google.com/file/d/1HVmha1V5H5z5B-jx3eXJjwyfBlppdfcE/view?usp=sharing"
+  },
+  {
+    title: "MarketScout - AI Market Analysis Platform",
+    description: "An AI-driven platform that analyzes real-time market data to provide actionable insights and predictions for entrepreneurs and investors.",
+    why: "I built this to empower entrepreneurs and investors with data-driven insights, helping them make informed decisions in a rapidly changing market landscape.",
+    tags: ["Python", "LangChain", "FastAPI", "Next.js", "LLM", "Hugging Face",] ,
+    link: "https://market-scout-snowy.vercel.app/",
+    github: "https://github.com/Amanmeena0/MarketScout",
+    image: "https://drive.google.com/file/d/1Q63v0lE0PZKXL3nPlLXDXfKL92MbvRc5/view?usp=sharing"
   },
   {
     title:"Skky - Smart Trip Planner",
@@ -42,7 +51,7 @@ export const PROJECTS: Project[] = [
     description: "An AI system that synthesizes product reviews across platforms to provide comprehensive insights.",
     why: "I built this to help consumers make informed decisions by distilling vast amounts of review data into actionable insights.",
     tags: ["Python", "PyTorch", "Scikit-learn", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
-    link: "#",
+    link: "https://revumind-kuvydou8ruyknsea7mys72.streamlit.app/",
     github: "https://github.com/Amanmeena0/RevuMind",
     image: "https://drive.google.com/file/d/1g_yZMZDtkNCLxxv8shuQD1Chg_1cTxel/view?usp=sharing"
   },
@@ -64,13 +73,4 @@ export const PROJECTS: Project[] = [
       github: "https://github.com/Amanmeena0/FunRe",
       image: "https://picsum.photos/seed/resume/800/600"  
   },
-  {
-    title: "Convincesence - Online Coach", 
-    description: "ConvinceSense is a real-time conversational engagement detection system that analyzes sales calls to output a convincingness score (1–5) based on acoustic features, speech recognition, and NLP sentiment analysis.",
-    why: "I built this to help sales professionals improve their communication skills and increase their chances of success in sales interactions.",
-    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
-    link: "#",
-    github: "https://github.com/Amanmeena0/convincesence-update",
-    image: "https://picsum.photos/seed/sales/800/600"
-  }
 ];
