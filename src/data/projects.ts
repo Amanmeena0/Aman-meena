@@ -12,12 +12,21 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Talklytics - Real-time Conversational Engagement Detection System", 
-    description: "ConvinceSense is a real-time conversational engagement detection system that analyzes sales calls to output a convincingness score (1–5) based on acoustic features, speech recognition, and NLP sentiment analysis.",
+    description: "Talklytics is a real-time conversational engagement detection system that analyzes sales calls to output a convincingness score (1–5) based on acoustic features, speech recognition, and NLP sentiment analysis.",
     why: "I built this to help sales professionals improve their communication skills and increase their chances of success in sales interactions.",
     tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
     link: "https://conviciesense-mic.vercel.app/",
     github: "https://github.com/Amanmeena0/Talklytics-update",
     image: "https://drive.google.com/file/d/1HVmha1V5H5z5B-jx3eXJjwyfBlppdfcE/view?usp=sharing"
+  },
+  {
+    title:"Botanical Merge | Blend Your Vision",
+    description: "An AI-powered image blending tool that allows users to merge two images into a unique creation using advanced algorithms.",
+    why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
+    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
+    link: "https://botanical-merge.vercel.app/",
+    github: "https://github.com/Amanmeena0/Botanical_Merge",
+    image: "https://drive.google.com/file/d/1iD5eDpsCcFqQ4Np2YAc5ArRcJsgp4SS5/view?usp=sharing"
   },
   {
     title: "MarketScout - AI Market Analysis Platform",
@@ -36,15 +45,6 @@ export const PROJECTS: Project[] = [
     link: "https://next-trip-ebon.vercel.app/",
     github: "https://github.com/Amanmeena0/Skky",
     image: "https://drive.google.com/file/d/1J0zKu3I8YP5K4kvBQ7jr8q_UkaXEWP8j/view?usp=sharing"
-  },
-  {
-    title:"Botanical Merge | Blend Your Vision",
-    description: "An AI-powered image blending tool that allows users to merge two images into a unique creation using advanced algorithms.",
-    why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
-    tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
-    link: "https://botanical-merge.vercel.app/",
-    github: "https://github.com/Amanmeena0/Botanical_Merge",
-    image: "https://drive.google.com/file/d/1iD5eDpsCcFqQ4Np2YAc5ArRcJsgp4SS5/view?usp=sharing"
   },
   {
     title: "RevuMind - Multimodel Product Review Intelligence System",
