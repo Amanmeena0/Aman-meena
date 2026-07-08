@@ -56,15 +56,6 @@ export const PROJECTS: Project[] = [
     image: "https://drive.google.com/file/d/1g_yZMZDtkNCLxxv8shuQD1Chg_1cTxel/view?usp=sharing"
   },
   {
-    title: "EduMantri: AI-Powered Educational Assistant",
-    description: "An AI assistant that provides personalized educational guidance and resources from knowledge bases based on user queries.",
-    why: "I built this to democratize access to quality educational resources and empower learners with personalized guidance.",
-    tags: ["Agentic AI","Python","LangChain", "A2A", "MCP", "Next.js","LLM","Hugging Face",],
-    link: "#",
-    github: "https://github.com/Amanmeena0/EduMantri",
-    image: "https://picsum.photos/seed/policy/800/600"
-  },
-  {
       title:"FunRe - Modern Resume Builder",
       description: "A modern resume builder that uses Custimized resume templates to help users create Cozy and fun resumes with ease.", 
       why: "I built this to provide a simple and enjoyable way for users to create professional resumes.",
