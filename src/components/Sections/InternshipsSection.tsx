@@ -38,7 +38,7 @@ export function InternshipsSection() {
             <p className="text-xs font-mono uppercase tracking-widest text-charcoal/60">Internships</p>
           </div>
           <div className="p-6 bg-bg rounded-2xl border border-charcoal/5">
-            <p className="text-2xl md:text-3xl font-serif text-charcoal mb-2">8+</p>
+            <p className="text-2xl md:text-3xl font-serif text-charcoal mb-2">10+</p>
             <p className="text-xs font-mono uppercase tracking-widest text-charcoal/60">Months Experience</p>
           </div>
           <div className="p-6 bg-bg rounded-2xl border border-charcoal/5">
