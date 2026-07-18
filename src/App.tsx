@@ -6,6 +6,8 @@ import { ProjectsSection } from "@/src/components/Sections/ProjectsSection";
 import { ContactSection } from "@/src/components/Sections/ContactSection";
 import { Footer } from "@/src/components/Sections/Footer";
 import { SkillsSection } from "@/src/components/Sections/SkillsSection";
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App() {
   return (
     <div className="min-h-screen selection:bg-accent-terracotta/20">
@@ -18,6 +20,7 @@ export default function App() {
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      <Analytics />
     </div>
   );
 }
