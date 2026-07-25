@@ -6,10 +6,10 @@ export const INTERNSHIPS: Internship[] = [
     title: "Software Engineering Intern",
     company: "Accenture",
     period: "December 2025 - Present",
-    duration: "4+ months",
+    duration: "6 months",
     description: "Managed production support tickets in a large-scale enterprise project, improving resolution efficiency and maintaining SLA compliance. Completed comprehensive training across 15+ technologies including Agentic AI, RAG, LangChain, and LangGraph. Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer.",
     detailedDescription: "Managed production support tickets in a large-scale enterprise project, improving resolution efficiency and maintaining SLA compliance. Completed comprehensive training across 15+ technologies including Agentic AI, RAG, LangChain, and LangGraph. Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer.",
-    skills: ["Python", "TypeScript", "T-SQL", "React", "AWS", "Azure", "Docker", "Kubernetes", "Machine Learning", "Agentic AI", "RAG", "LangChain", "LangGraph", "DevOps", "GitHub", "Prompt Engineering"],
+    skills: ["Python", "T-SQL", "AWS", "Azure", "Agentic AI", "RAG", "LangChain", "LangGraph", "DevOps", "GitHub", "Prompt Engineering"],
     achievements: [
       "Achieved P2+ proficiency in Accenture MyCompetency, qualifying for full-time role as top performer",
       "Certification in all these fields: Agentic AI, DevOps, Prompt Engineering, etc.",
