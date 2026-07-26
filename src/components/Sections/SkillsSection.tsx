@@ -4,7 +4,8 @@ import { Globe, X, CheckCircle2, Layers } from 'lucide-react';
 
 interface Planet {
   name: string;
-  category: string;
+  iconLabel: string;
+  category: 'languages' | 'ai' | 'backend' | 'devops' | 'tools' | 'specializations';
   level: number;
   experience: string;
   gradient: string;
@@ -13,20 +14,41 @@ interface Planet {
 }
 
 const PLANETS: Planet[] = [
-  { name: 'Python',         category: 'ai',       level: 92, experience: '3+ Years', gradient: 'from-[#F9C74F] to-[#FF8752]',    glowColor: '#F9C74F', details: ['FastAPI & Flask','PyTorch & TensorFlow ML','NLP & Audio Signal Processing'] },
-  { name: 'React',          category: 'frontend', level: 95, experience: '3+ Years', gradient: 'from-[#FF6B3D] to-[#FF4D4D]',   glowColor: '#FF6B3D', details: ['React 19 Hooks & Server Components','Virtual DOM Optimization','Custom Hooks & State Management'] },
-  { name: 'Tailwind',       category: 'frontend', level: 95, experience: '3+ Years', gradient: 'from-[#FF8752] to-[#FF6B3D]',   glowColor: '#FF8752', details: ['Tailwind v4 Engine','Custom Design Systems','Responsive Architecture'] },
-  { name: 'Next.js',        category: 'frontend', level: 90, experience: '2+ Years', gradient: 'from-white to-[#C8C8C8]',         glowColor: '#FFFFFF', details: ['App Router & Server Actions','SSG, SSR & ISR Data Fetching','Edge Middleware'] },
-  { name: 'LangChain/RAG',  category: 'ai',       level: 88, experience: '1.5 Years',gradient: 'from-[#FF6B3D] to-[#F9C74F]',  glowColor: '#FF6B3D', details: ['Agentic AI & LangGraph','ChromaDB Vector Databases','LLM Query Optimization'] },
-  { name: 'TypeScript',     category: 'frontend', level: 90, experience: '2.5 Years',gradient: 'from-[#C8C8C8] to-[#8E8E8E]',   glowColor: '#C8C8C8', details: ['Strict Type Safety','Generic Constraints','SDK & Library Design'] },
-  { name: 'Node',           category: 'backend',  level: 88, experience: '1+ Years', gradient: 'from-[#D9D9D9] to-[#8E8E8E]',    glowColor: '#D9D9D9', details: ['REST APIs & GraphQL','Express & Fastify','Async I/O Performance'] },
-  { name: 'MongoDB',        category: 'backend',  level: 82, experience: '2 Years',  gradient: 'from-[#8E8E8E] to-[#6D6D6D]',   glowColor: '#8E8E8E', details: ['NoSQL Schema Design','Aggregation Pipelines','Mongoose ODM'] },
-  { name: 'Supabase',       category: 'backend',  level: 85, experience: '1 Years',  gradient: 'from-[#D9D9D9] to-[#AAAAAA]',   glowColor: '#D9D9D9', details: ['PostgreSQL & RLS','Real-time Subscriptions','Edge Functions'] },
-  { name: 'Docker',         category: 'devops',   level: 80, experience: '1 Years',gradient: 'from-[#B8B8B8] to-[#8E8E8E]',  glowColor: '#B8B8B8', details: ['Multi-Stage Containers','Docker Compose','CI/CD Integration'] },
-  { name: 'AI Agent Architect', category: 'ai', level: 92, experience: '2+ Years', gradient: 'from-purple-500 to-pink-500', glowColor: '#A855F7', details: ['Multi-Agent Systems','Orchestration Frameworks (LangGraph)','Memory & State Management'] },
+  // Languages
+  { name: 'Python', iconLabel: 'PY', category: 'languages', level: 95, experience: '3+ Years', gradient: 'from-[#F9C74F] to-[#FF8752]', glowColor: '#F9C74F', details: ['FastAPI & Flask Backends', 'PyTorch & Data Processing', 'Scripting & Automation'] },
+  { name: 'SQL', iconLabel: 'SQL', category: 'languages', level: 92, experience: '2.5+ Years', gradient: 'from-[#336791] to-[#2B5B84]', glowColor: '#336791', details: ['PostgreSQL & T-SQL Queries', 'Aggregation Pipelines', 'Relational Schema Optimization'] },
+  { name: 'TypeScript', iconLabel: 'TS', category: 'languages', level: 90, experience: '2.5+ Years', gradient: 'from-[#61DAFB] to-[#2B7489]', glowColor: '#61DAFB', details: ['Strict Type Safety & Interfaces', 'React & Next.js Ecosystem', 'SDK & Library Design'] },
+  { name: 'JavaScript', iconLabel: 'JS', category: 'languages', level: 90, experience: '3+ Years', gradient: 'from-[#F7DF1E] to-[#D4B817]', glowColor: '#F7DF1E', details: ['Modern ES6+ Features', 'Async/Await & Promises', 'Frontend & Node.js Runtime'] },
+  { name: 'C / C++', iconLabel: 'C++', category: 'languages', level: 85, experience: '2+ Years', gradient: 'from-[#00599C] to-[#00447C]', glowColor: '#00599C', details: ['Object Oriented Programming', 'Low-level Memory & Pointers', 'Data Structures & Algorithms'] },
+
+  // AI & LLMs
+  { name: 'Agentic AI', iconLabel: 'AGI', category: 'ai', level: 94, experience: '2+ Years', gradient: 'from-purple-500 to-pink-500', glowColor: '#A855F7', details: ['Multi-Agent Systems', 'Autonomous Decision Workflows', 'Agent Orchestration Frameworks'] },
+  { name: 'LangGraph', iconLabel: 'GRAPH', category: 'ai', level: 92, experience: '1.5+ Years', gradient: 'from-[#FF6B3D] to-[#F9C74F]', glowColor: '#FF6B3D', details: ['Multi-Node Reflection Cycles', 'Gap-Driven Agent Routing', 'State & Memory Management'] },
+  { name: 'LangChain & RAG', iconLabel: 'RAG', category: 'ai', level: 93, experience: '2+ Years', gradient: 'from-[#FF8752] to-[#FF6B3D]', glowColor: '#FF8752', details: ['Document Indexing (2K+ chunks)', 'Retrieval@3 Optimization', 'RAG-Chain Caching & Workers'] },
+  { name: 'MCP Protocol', iconLabel: 'MCP', category: 'ai', level: 88, experience: '1+ Years', gradient: 'from-[#00E5FF] to-[#00B0FF]', glowColor: '#00E5FF', details: ['Model Context Protocol Servers', 'Multi-Source Data Integrations', 'Retry/Backoff & Rate Limiting'] },
+  { name: 'Prompt Eng.', iconLabel: 'PRM', category: 'ai', level: 95, experience: '2+ Years', gradient: 'from-[#F9C74F] to-[#FF8752]', glowColor: '#F9C74F', details: ['Eval Set Benchmark Testing', 'AI Guardrails & Session Safety', 'Hallucination Minimization'] },
+  { name: 'PyTorch', iconLabel: 'TORCH', category: 'ai', level: 85, experience: '1.5+ Years', gradient: 'from-[#EE4C2C] to-[#C73719]', glowColor: '#EE4C2C', details: ['Multimodal Deception Pipelines', 'Linguistic & Acoustic Models', 'Feature Extraction & Embeddings'] },
+
+  // Backend & APIs
+  { name: 'REST & Sockets', iconLabel: 'API', category: 'backend', level: 92, experience: '2.5+ Years', gradient: 'from-[#FF6B3D] to-[#FF8752]', glowColor: '#FF6B3D', details: ['FastAPI Backend Architecture', 'Real-Time WebSocket Streaming', 'Clean Service-Repository Pattern'] },
+  { name: 'PostgreSQL', iconLabel: 'PG', category: 'backend', level: 90, experience: '2+ Years', gradient: 'from-[#336791] to-[#417EAF]', glowColor: '#336791', details: ['SQLAlchemy ORM & Neon Host', 'Geospatial GeoJSON Caching', 'ACID Transactions & Indexing'] },
+  { name: 'MongoDB', iconLabel: 'MDB', category: 'backend', level: 85, experience: '2+ Years', gradient: 'from-[#47A248] to-[#3B873C]', glowColor: '#47A248', details: ['Document Schema Modeling', 'Aggregation Pipelines', 'NoSQL Storage Solutions'] },
+  { name: 'ChromaDB & Redis', iconLabel: 'VEC', category: 'backend', level: 88, experience: '1.5+ Years', gradient: 'from-[#DC382D] to-[#FF4438]', glowColor: '#DC382D', details: ['Persistent RAG Vector Storage', 'Celery Background Task Queues', 'In-Memory Cache Latency Reduction'] },
+  { name: 'JWT Auth', iconLabel: 'AUTH', category: 'backend', level: 90, experience: '2+ Years', gradient: 'from-[#D9D9D9] to-[#8E8E8E]', glowColor: '#D9D9D9', details: ['Clerk JWT Authentication', 'JWKS Auto-Sync Verification', 'Session Safety Guardrails'] },
+
+  // Cloud & DevOps
+  { name: 'AWS (S3, EC2)', iconLabel: 'AWS', category: 'devops', level: 88, experience: '2+ Years', gradient: 'from-[#FF9900] to-[#E68A00]', glowColor: '#FF9900', details: ['S3 Evidence Storage', 'EC2 Instance Management', 'Cloud Infrastructure Setup'] },
+  { name: 'Docker & Linux', iconLabel: 'DOC', category: 'devops', level: 86, experience: '2+ Years', gradient: 'from-[#2496ED] to-[#1A77C2]', glowColor: '#2496ED', details: ['Multi-Stage Container Builds', 'Linux System Administration', 'Isolated Environment Config'] },
+  { name: 'GitHub CI/CD', iconLabel: 'CI', category: 'devops', level: 88, experience: '2+ Years', gradient: 'from-[#F05032] to-[#D83A1C]', glowColor: '#F05032', details: ['Automated Build & Test Pipelines', 'Version Control & Branching', 'Deployment Automation'] },
+
+  // Developer Tools
+  { name: 'Developer Tools', iconLabel: 'TOOLS', category: 'tools', level: 92, experience: '3+ Years', gradient: 'from-[#C8C8C8] to-[#8E8E8E]', glowColor: '#C8C8C8', details: ['Git & VS Code Workflow', 'Postman API Testing', 'Neon Database & Odysseus'] },
+
+  // Specializations
+  { name: 'System Design', iconLabel: 'LLD', category: 'specializations', level: 90, experience: '2+ Years', gradient: 'from-[#F9C74F] to-[#FF6B3D]', glowColor: '#F9C74F', details: ['LLD System Architecture', 'Database Schema Architecture', 'API Design & Agent Orchestration'] },
 ];
 
-type FilterType = 'all' | 'frontend' | 'backend' | 'ai' | 'devops';
+type FilterType = 'all' | 'languages' | 'ai' | 'backend' | 'devops' | 'tools' | 'specializations';
 
 export const SkillsSection: React.FC = () => {
   const [selected, setSelected] = useState<Planet | null>(null);
@@ -56,7 +78,7 @@ export const SkillsSection: React.FC = () => {
 
         {/* Filter pills */}
         <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
-          {(['all','frontend','backend','ai','devops'] as FilterType[]).map((cat) => (
+          {(['all','languages','ai','backend','devops','tools','specializations'] as FilterType[]).map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -67,7 +89,19 @@ export const SkillsSection: React.FC = () => {
                   : { background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8E8E8E' }
               }
             >
-              {cat === 'all' ? 'All Planets' : cat}
+              {cat === 'all'
+                ? 'All Planets'
+                : cat === 'languages'
+                ? 'Languages'
+                : cat === 'ai'
+                ? 'AI & LLMs'
+                : cat === 'backend'
+                ? 'Backend & APIs'
+                : cat === 'devops'
+                ? 'Cloud & DevOps'
+                : cat === 'tools'
+                ? 'Dev Tools'
+                : 'Specializations'}
             </button>
           ))}
         </div>
@@ -81,7 +115,7 @@ export const SkillsSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.05 }}
+            transition={{ duration: 0.5, delay: idx * 0.04 }}
             onClick={() => setSelected(planet)}
             className="group relative flex flex-col items-center cursor-pointer p-4"
           >
@@ -95,8 +129,8 @@ export const SkillsSection: React.FC = () => {
                 style={{ boxShadow: `0 0 18px ${planet.glowColor}33` }}
               >
                 <div className="absolute top-0 left-0 w-full h-1/2 bg-white/15 rounded-t-full" />
-                <span className="text-xs font-mono font-bold text-[#050505] z-10 drop-shadow">
-                  {planet.name.slice(0, 3)}
+                <span className="text-[10px] font-mono font-extrabold text-[#050505] z-10 drop-shadow tracking-tight px-1 text-center">
+                  {planet.iconLabel}
                 </span>
               </div>
             </div>
@@ -136,8 +170,8 @@ export const SkillsSection: React.FC = () => {
               <div className="flex items-center gap-6 mb-6">
                 <div className="relative w-20 h-20 flex items-center justify-center flex-shrink-0">
                   <div className="absolute inset-0 rounded-full border-2 border-dashed animate-spin-slow" style={{ borderColor: selected.glowColor }} />
-                  <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${selected.gradient} flex items-center justify-center text-[#050505] font-bold text-sm`}>
-                    {selected.name.slice(0, 3)}
+                  <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${selected.gradient} flex items-center justify-center text-[#050505] font-extrabold text-xs tracking-tight px-1 text-center`}>
+                    {selected.iconLabel}
                   </div>
                 </div>
                 <div>
@@ -197,3 +231,4 @@ export const SkillsSection: React.FC = () => {
     </section>
   );
 };
+

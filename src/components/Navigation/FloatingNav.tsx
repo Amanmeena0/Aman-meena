@@ -133,7 +133,7 @@ export const FloatingNav: React.FC = () => {
         {/* Resume button — gradient outline */}
         <div className="hidden md:flex">
           <a
-            href="https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing"
+            href="https://drive.google.com/file/d/15gF3wKZ2mEMCrzhPAm1RC0uhFUc5bRuy/view"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center p-[1px] rounded-xl overflow-hidden transition-all duration-300"

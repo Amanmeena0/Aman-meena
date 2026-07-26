@@ -128,7 +128,7 @@ export const HeroSection: React.FC = () => {
           {/* Secondary — transparent black + white border */}
           <a
             id="hero-resume-btn"
-            href="https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing"
+            href="https://drive.google.com/file/d/15gF3wKZ2mEMCrzhPAm1RC0uhFUc5bRuy/view"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-mono text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1"
