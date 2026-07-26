@@ -160,7 +160,7 @@ export const HeroSection: React.FC = () => {
             { value: '6+',  label: 'Projects',      color: '#FF6B3D' },
             { value: '3+',  label: 'Internships',   color: '#FF8752' },
             { value: '15+', label: 'Technologies',  color: '#F9C74F' },
-            { value: 'P2+', label: 'Accenture Top', color: '#FFFFFF' },
+            { value: 'P3', label: 'Accenture Top', color: '#FFFFFF' },
           ].map((s) => (
             <div
               key={s.label}

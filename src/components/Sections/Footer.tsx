@@ -49,12 +49,7 @@ export const Footer: React.FC = () => {
           <p className="text-xs text-[#8E8E8E] font-mono">Designed & Engineered for Deep Space Exploration.</p>
         </div>
 
-        {/* Center: Copyright */}
-        <div className="text-xs font-mono text-[#8E8E8E] text-center">
-          © {new Date().getFullYear()} Aman Meena. All Rights Reserved.
-          <br />
-          Built with React 19, Three.js & Vite 6.
-        </div>
+       
 
         {/* Right: Back to top */}
         <button

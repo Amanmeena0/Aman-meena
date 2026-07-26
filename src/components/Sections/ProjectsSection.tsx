@@ -32,10 +32,7 @@ export const ProjectsSection: React.FC = () => {
           <span style={{ background: 'linear-gradient(135deg,#FF6B3D,#F9C74F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             Project Spacecrafts
           </span>
-        </h2>
-        <p className="text-base text-[#8E8E8E] max-w-2xl">
-          Each craft represents a deployed mission engineered for peak performance. Click to initialize the hologram view.
-        </p>
+        </h2> 
 
         {/* Category filters */}
         <div className="flex flex-wrap items-center justify-center gap-2 pt-4">

@@ -23,9 +23,6 @@ export const ExperienceSection: React.FC = () => {
             Space &amp; Time
           </span>
         </h2>
-        <p className="text-base text-[#8E8E8E] max-w-2xl">
-          Every milestone is a unique planetary destination. Select a planet to review key mission accomplishments.
-        </p>
       </div>
 
       {/* Planetary waypoints */}

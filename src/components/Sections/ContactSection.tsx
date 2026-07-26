@@ -1,12 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Linkedin, Github, FileText, CheckCircle2, Radio, Sparkles } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { Mail, Linkedin, Github, Radio } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [isSubmitting, setIsSub] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const earthRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -24,7 +20,7 @@ export const ContactSection: React.FC = () => {
       rotation += 0.004;
       ctx.clearRect(0, 0, w, h);
       const cx = w / 2, cy = h / 2;
-      const r = Math.min(w, h) * 0.38;
+      const r = Math.min(w, h) * 0.42;
 
       // Warm orange atmosphere glow
       const atm = ctx.createRadialGradient(cx, cy, r * 0.9, cx, cy, r * 1.35);
@@ -74,19 +70,10 @@ export const ContactSection: React.FC = () => {
     return () => { cancelAnimationFrame(rafId); window.removeEventListener('resize', onResize); };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); setIsSub(true);
-    setTimeout(() => {
-      setIsSub(false); setSubmitted(true);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#FF6B3D', '#FF8752', '#F9C74F'] });
-    }, 1200);
-  };
-
   const socialLinks = [
-    { icon: Mail, label: 'Direct Email', sub: 'aman@dev.in', href: 'mailto:meenaaman581@gmail.com', accent: '#FF6B3D' },
+    { icon: Mail, label: 'Direct Email', sub: 'meenaaman581@gmail.com', href: 'mailto:meenaaman581@gmail.com', accent: '#FF6B3D' },
     { icon: Github, label: 'GitHub Code Vault', sub: 'Amanmeena0', href: 'https://github.com/Amanmeena0', accent: '#FF8752' },
     { icon: Linkedin, label: 'LinkedIn Satellite', sub: 'Aman Meena', href: 'https://www.linkedin.com/in/aman-meena-11326a395/', accent: '#F9C74F' },
-    { icon: FileText, label: 'Curriculum Vitae', sub: 'Download Resume PDF', href: 'https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing', accent: '#C8C8C8' },
   ];
 
   return (
@@ -105,142 +92,49 @@ export const ContactSection: React.FC = () => {
             Space Telemetry Link
           </span>
         </h2>
-        <p className="text-base text-[#8E8E8E] max-w-2xl">
-          Transmit your signal to my deep space relay array. Let's collaborate on groundbreaking software or AI engineering.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        {/* Left: Earth + socials */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-          className="lg:col-span-5 glass-panel p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden min-h-[480px]"
-        >
-          <div className="absolute inset-0 w-full h-full opacity-50 pointer-events-none flex items-center justify-center">
-            <canvas ref={earthRef} className="w-full h-full" />
+      {/* Full-width Deep Space Communications card */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+        className="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden min-h-[380px] flex flex-col justify-between"
+      >
+        {/* Planet illustration — centered behind content */}
+        <div className="absolute inset-0 w-full h-full opacity-50 pointer-events-none flex items-center justify-center">
+          <canvas ref={earthRef} className="w-full h-full" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 space-y-10">
+          {/* Card heading */}
+          <div className="mb-17 space-y-2">
+            <span className="text-xs font-mono text-[#FF6B3D] uppercase tracking-widest">Orbiting Telemetry</span>
+            <h3 className="text-2xl font-heading font-bold text-white">Deep Space Communications</h3>
           </div>
 
-          <div className="relative z-10 space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs font-mono text-[#FF6B3D] uppercase tracking-widest">Orbiting Telemetry</span>
-              <h3 className="text-2xl font-heading font-bold text-white">Deep Space Communications</h3>
-              <p className="text-xs sm:text-sm text-[#C8C8C8] leading-relaxed">
-                Earth base station online. Send a direct transmission or connect across planetary channels.
-              </p>
-            </div>
-
-            <div className="space-y-3 pt-4">
-              {socialLinks.map(({ icon: Icon, label, sub, href, accent }) => (
-                <a
-                  key={label}
-                  href={href} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl transition-all group"
-                  style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = `${accent}44`; (e.currentTarget as HTMLElement).style.background = `${accent}0A`; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'; }}
-                >
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform" style={{ background: `${accent}18`, color: accent }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-mono text-[#8E8E8E]">{label}</div>
-                    <div className="text-sm font-heading font-semibold text-white">{sub}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right: Contact form */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:col-span-7 p-8 sm:p-10 rounded-3xl"
-          style={{ background: '#0D0D0D', border: '1px solid rgba(255,255,255,0.07)', boxShadow: '0 0 50px rgba(0,0,0,0.6)' }}
-        >
-          {submitted ? (
-            <div className="flex flex-col items-center justify-center text-center py-16 space-y-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center animate-pulse" style={{ background: 'rgba(255,107,61,0.12)', border: '2px solid #FF6B3D' }}>
-                <CheckCircle2 className="w-8 h-8 text-[#FF6B3D]" />
-              </div>
-              <h3 className="text-2xl font-heading font-bold text-white">Transmission Dispatched!</h3>
-              <p className="text-sm text-[#8E8E8E] max-w-md">Your message has been encoded and transmitted. I will respond shortly.</p>
-              <button
-                onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', message: '' }); }}
-                className="mt-4 px-6 py-2.5 rounded-xl text-xs font-mono text-white transition-colors"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+          {/* Contact cards grid: 3-col desktop, 2-col tablet, 1-col mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {socialLinks.map(({ icon: Icon, label, sub, href, accent }) => (
+              <a
+                key={label}
+                href={href} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-5 p-5 rounded-2xl transition-all group"
+                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = `${accent}44`; (e.currentTarget as HTMLElement).style.background = `${accent}0A`; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'; }}
               >
-                Send Another Signal
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="flex items-center justify-between border-b border-white/8 pb-4">
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-white">Transmit Message Signal</h3>
-                  <p className="text-xs font-mono text-[#8E8E8E]">Fill out transmission parameters below</p>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0" style={{ background: `${accent}18`, color: accent }}>
+                  <Icon className="w-6 h-6" />
                 </div>
-                <Sparkles className="w-5 h-5 text-[#FF6B3D]" />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  { label: 'Explorer Name', key: 'name', type: 'text', placeholder: 'Enter your name' },
-                  { label: 'Return Signal Email', key: 'email', type: 'email', placeholder: 'name@domain.com' },
-                ].map(({ label, key, type, placeholder }) => (
-                  <div key={key} className="space-y-2">
-                    <label className="text-xs font-mono text-[#8E8E8E] uppercase">{label}</label>
-                    <input
-                      type={type} required
-                      value={(formData as any)[key]}
-                      onChange={(e) => setFormData({ ...formData, [key]: e.target.value })}
-                      placeholder={placeholder}
-                      className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none transition-all"
-                      style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', fontFamily: 'inherit' }}
-                      onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,107,61,0.5)'; }}
-                      onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                    />
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-mono text-[#8E8E8E] uppercase">Transmission Content</label>
-                <textarea
-                  required rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Describe your project, mission proposal, or inquiry..."
-                  className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none transition-all resize-none"
-                  style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', fontFamily: 'inherit' }}
-                  onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,107,61,0.5)'; }}
-                  onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                />
-              </div>
-
-              <button
-                type="submit" disabled={isSubmitting}
-                className="w-full py-4 rounded-2xl font-mono text-sm font-bold text-white flex items-center justify-center gap-2 group cursor-pointer disabled:opacity-50 transition-all"
-                style={{ background: 'linear-gradient(135deg,#FF5C39,#FF7A3D,#F9C74F)', boxShadow: '0 0 28px rgba(255,107,61,0.35)' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px rgba(255,107,61,0.65)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 28px rgba(255,107,61,0.35)'; }}
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full border-2 border-white border-t-transparent animate-spin" />
-                    Transmitting Across Cosmos...
-                  </span>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    Send Deep Space Transmission
-                  </>
-                )}
-              </button>
-            </form>
-          )}
-        </motion.div>
-      </div>
+                <div>
+                  <div className="text-xs font-mono text-[#8E8E8E]">{label}</div>
+                  <div className="text-sm font-heading font-semibold text-white">{sub}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };

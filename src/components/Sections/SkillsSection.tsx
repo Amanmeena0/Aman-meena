@@ -13,16 +13,17 @@ interface Planet {
 }
 
 const PLANETS: Planet[] = [
-  { name: 'React',          category: 'frontend', level: 95, experience: '3+ Years', gradient: 'from-[#FF6B3D] to-[#FF4D4D]',   glowColor: '#FF6B3D', details: ['React 19 Hooks & Server Components','Virtual DOM Optimization','Custom Hooks & State Management'] },
-  { name: 'Next.js',        category: 'frontend', level: 90, experience: '2+ Years', gradient: 'from-white to-[#C8C8C8]',         glowColor: '#FFFFFF', details: ['App Router & Server Actions','SSG, SSR & ISR Data Fetching','Edge Middleware'] },
-  { name: 'Node',           category: 'backend',  level: 88, experience: '3+ Years', gradient: 'from-[#D9D9D9] to-[#8E8E8E]',    glowColor: '#D9D9D9', details: ['REST APIs & GraphQL','Express & Fastify','Async I/O Performance'] },
   { name: 'Python',         category: 'ai',       level: 92, experience: '3+ Years', gradient: 'from-[#F9C74F] to-[#FF8752]',    glowColor: '#F9C74F', details: ['FastAPI & Flask','PyTorch & TensorFlow ML','NLP & Audio Signal Processing'] },
-  { name: 'TypeScript',     category: 'frontend', level: 90, experience: '2.5 Years',gradient: 'from-[#C8C8C8] to-[#8E8E8E]',   glowColor: '#C8C8C8', details: ['Strict Type Safety','Generic Constraints','SDK & Library Design'] },
+  { name: 'React',          category: 'frontend', level: 95, experience: '3+ Years', gradient: 'from-[#FF6B3D] to-[#FF4D4D]',   glowColor: '#FF6B3D', details: ['React 19 Hooks & Server Components','Virtual DOM Optimization','Custom Hooks & State Management'] },
   { name: 'Tailwind',       category: 'frontend', level: 95, experience: '3+ Years', gradient: 'from-[#FF8752] to-[#FF6B3D]',   glowColor: '#FF8752', details: ['Tailwind v4 Engine','Custom Design Systems','Responsive Architecture'] },
-  { name: 'MongoDB',        category: 'backend',  level: 82, experience: '2 Years',  gradient: 'from-[#8E8E8E] to-[#6D6D6D]',   glowColor: '#8E8E8E', details: ['NoSQL Schema Design','Aggregation Pipelines','Mongoose ODM'] },
-  { name: 'Supabase',       category: 'backend',  level: 85, experience: '2 Years',  gradient: 'from-[#D9D9D9] to-[#AAAAAA]',   glowColor: '#D9D9D9', details: ['PostgreSQL & RLS','Real-time Subscriptions','Edge Functions'] },
-  { name: 'Docker',         category: 'devops',   level: 80, experience: '1.5 Years',gradient: 'from-[#B8B8B8] to-[#8E8E8E]',  glowColor: '#B8B8B8', details: ['Multi-Stage Containers','Docker Compose','CI/CD Integration'] },
+  { name: 'Next.js',        category: 'frontend', level: 90, experience: '2+ Years', gradient: 'from-white to-[#C8C8C8]',         glowColor: '#FFFFFF', details: ['App Router & Server Actions','SSG, SSR & ISR Data Fetching','Edge Middleware'] },
   { name: 'LangChain/RAG',  category: 'ai',       level: 88, experience: '1.5 Years',gradient: 'from-[#FF6B3D] to-[#F9C74F]',  glowColor: '#FF6B3D', details: ['Agentic AI & LangGraph','ChromaDB Vector Databases','LLM Query Optimization'] },
+  { name: 'TypeScript',     category: 'frontend', level: 90, experience: '2.5 Years',gradient: 'from-[#C8C8C8] to-[#8E8E8E]',   glowColor: '#C8C8C8', details: ['Strict Type Safety','Generic Constraints','SDK & Library Design'] },
+  { name: 'Node',           category: 'backend',  level: 88, experience: '1+ Years', gradient: 'from-[#D9D9D9] to-[#8E8E8E]',    glowColor: '#D9D9D9', details: ['REST APIs & GraphQL','Express & Fastify','Async I/O Performance'] },
+  { name: 'MongoDB',        category: 'backend',  level: 82, experience: '2 Years',  gradient: 'from-[#8E8E8E] to-[#6D6D6D]',   glowColor: '#8E8E8E', details: ['NoSQL Schema Design','Aggregation Pipelines','Mongoose ODM'] },
+  { name: 'Supabase',       category: 'backend',  level: 85, experience: '1 Years',  gradient: 'from-[#D9D9D9] to-[#AAAAAA]',   glowColor: '#D9D9D9', details: ['PostgreSQL & RLS','Real-time Subscriptions','Edge Functions'] },
+  { name: 'Docker',         category: 'devops',   level: 80, experience: '1 Years',gradient: 'from-[#B8B8B8] to-[#8E8E8E]',  glowColor: '#B8B8B8', details: ['Multi-Stage Containers','Docker Compose','CI/CD Integration'] },
+  { name: 'AI Agent Architect', category: 'ai', level: 92, experience: '2+ Years', gradient: 'from-purple-500 to-pink-500', glowColor: '#A855F7', details: ['Multi-Agent Systems','Orchestration Frameworks (LangGraph)','Memory & State Management'] },
 ];
 
 type FilterType = 'all' | 'frontend' | 'backend' | 'ai' | 'devops';

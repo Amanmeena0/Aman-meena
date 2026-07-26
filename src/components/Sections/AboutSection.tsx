@@ -48,9 +48,6 @@ export const AboutSection: React.FC = () => {
             The Command Center
           </span>
         </h2>
-        <p className="text-base text-[#8E8E8E] max-w-2xl">
-          Docking at Orbital Hub 01. Welcome inside the station where engineering precision meets creative exploration.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -150,7 +147,7 @@ export const AboutSection: React.FC = () => {
                   Full Stack Developer & AI Engineer passionate about constructing high-performance digital systems spanning React/Next.js frontends to Python/FastAPI backends and enterprise RAG architecture.
                 </p>
                 <p className="text-[#C8C8C8] leading-relaxed text-sm sm:text-base">
-                  Having researched multimodal lie detection at DIPR (DRDO), engineered trade policy RAG systems at DGFT (Ministry of Commerce), and managed production enterprise software at Accenture (top P2+ performer), I thrive at the intersection of AI innovation and production engineering.
+                  Having researched multimodal lie detection at DIPR (DRDO), engineered trade policy RAG systems at DGFT (Ministry of Commerce), and managed production enterprise software at Accenture (top P3 performer), I thrive at the intersection of AI innovation and production engineering.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                   {[
@@ -185,7 +182,7 @@ export const AboutSection: React.FC = () => {
                     <Award className="w-4 h-4 text-[#F9C74F]" /> Certifications
                   </h4>
                   <ul className="text-xs font-mono text-[#C8C8C8] space-y-1.5 list-disc list-inside">
-                    <li>Accenture MyCompetency P2+ Top Performer Qualification</li>
+                    <li>Accenture MyCompetency P3 Rating (Best Intern-Level)</li>
                     <li>Agentic AI, LangGraph & RAG System Architecture</li>
                     <li>DevOps, Azure & Containerization Certifications</li>
                   </ul>
