@@ -4,9 +4,9 @@ import { Send, Mail, Linkedin, Github, FileText, CheckCircle2, Radio, Sparkles }
 import confetti from 'canvas-confetti';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData]     = useState({ name: '', email: '', message: '' });
-  const [isSubmitting, setIsSub]    = useState(false);
-  const [submitted, setSubmitted]   = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSub] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const earthRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const ContactSection: React.FC = () => {
     if (!ctx) return;
 
     let rafId: number;
-    let w = (canvas.width  = canvas.parentElement?.clientWidth  || 400);
+    let w = (canvas.width = canvas.parentElement?.clientWidth || 400);
     let h = (canvas.height = canvas.parentElement?.clientHeight || 400);
     let rotation = 0;
 
@@ -24,7 +24,7 @@ export const ContactSection: React.FC = () => {
       rotation += 0.004;
       ctx.clearRect(0, 0, w, h);
       const cx = w / 2, cy = h / 2;
-      const r  = Math.min(w, h) * 0.38;
+      const r = Math.min(w, h) * 0.38;
 
       // Warm orange atmosphere glow
       const atm = ctx.createRadialGradient(cx, cy, r * 0.9, cx, cy, r * 1.35);
@@ -47,11 +47,11 @@ export const ContactSection: React.FC = () => {
       ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.clip();
       ctx.fillStyle = 'rgba(255,107,61,0.55)';
       for (let i = 0; i < 200; i++) {
-        const lat  = (i % 20) * (Math.PI / 10) - Math.PI / 2;
-        const lon  = (Math.floor(i / 20) * (Math.PI / 5) + rotation) % (Math.PI * 2);
-        const x    = cx + r * Math.cos(lat) * Math.sin(lon);
-        const y    = cy + r * Math.sin(lat);
-        const z    = Math.cos(lat) * Math.cos(lon);
+        const lat = (i % 20) * (Math.PI / 10) - Math.PI / 2;
+        const lon = (Math.floor(i / 20) * (Math.PI / 5) + rotation) % (Math.PI * 2);
+        const x = cx + r * Math.cos(lat) * Math.sin(lon);
+        const y = cy + r * Math.sin(lat);
+        const z = Math.cos(lat) * Math.cos(lon);
         if (z > 0) { ctx.beginPath(); ctx.arc(x, y, Math.max(1, z * 2.5), 0, Math.PI * 2); ctx.fill(); }
       }
       ctx.restore();
@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
 
     const onResize = () => {
       if (!canvas || !canvas.parentElement) return;
-      w = canvas.width  = canvas.parentElement.clientWidth;
+      w = canvas.width = canvas.parentElement.clientWidth;
       h = canvas.height = canvas.parentElement.clientHeight;
     };
     window.addEventListener('resize', onResize);
@@ -83,10 +83,10 @@ export const ContactSection: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Mail,     label: 'Direct Email',     sub: 'amanmeena00@gmail.com',         href: 'mailto:amanmeena00@gmail.com',                             accent: '#FF6B3D' },
-    { icon: Github,   label: 'GitHub Code Vault', sub: 'github.com/Amanmeena0',          href: 'https://github.com/Amanmeena0',                           accent: '#FF8752' },
-    { icon: Linkedin, label: 'LinkedIn Satellite',sub: 'Aman Meena',                    href: 'https://linkedin.com/in/ananay-meena',                     accent: '#F9C74F' },
-    { icon: FileText, label: 'Curriculum Vitae',  sub: 'Download Resume PDF',            href: 'https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing', accent: '#C8C8C8' },
+    { icon: Mail, label: 'Direct Email', sub: 'aman@dev.in', href: 'mailto:meenaaman581@gmail.com', accent: '#FF6B3D' },
+    { icon: Github, label: 'GitHub Code Vault', sub: 'Amanmeena0', href: 'https://github.com/Amanmeena0', accent: '#FF8752' },
+    { icon: Linkedin, label: 'LinkedIn Satellite', sub: 'Aman Meena', href: 'https://www.linkedin.com/in/aman-meena-11326a395/', accent: '#F9C74F' },
+    { icon: FileText, label: 'Curriculum Vitae', sub: 'Download Resume PDF', href: 'https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing', accent: '#C8C8C8' },
   ];
 
   return (
@@ -198,7 +198,7 @@ export const ContactSection: React.FC = () => {
                       className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none transition-all"
                       style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', fontFamily: 'inherit' }}
                       onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,107,61,0.5)'; }}
-                      onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                      onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
                     />
                   </div>
                 ))}
@@ -214,7 +214,7 @@ export const ContactSection: React.FC = () => {
                   className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-[#555] outline-none transition-all resize-none"
                   style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', fontFamily: 'inherit' }}
                   onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,107,61,0.5)'; }}
-                  onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                  onBlur={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; }}
                 />
               </div>
 
