@@ -1,61 +1,194 @@
-import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin, MailCheckIcon } from 'lucide-react';
-import { useGreeting } from '@/src/hooks/useGreeting';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Compass, Download, ArrowDown, Cpu } from 'lucide-react';
+import { HeroOrbitCanvas } from '../Space/HeroPlanet3D';
 
-export function HeroSection() {
-  const greeting = useGreeting();
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.75, delay, ease: [0.16, 1, 0.3, 1] as const },
+});
+
+export const HeroSection: React.FC = () => {
+  const scrollTo = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="relative container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20 min-h-[80vh] flex flex-col justify-center overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl z-10"
-      >
-        <span className="text-accent-terracotta font-medium tracking-widest uppercase text-sm mb-6 block">
-          {greeting}, I'm Aman
-        </span>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] text-charcoal mb-8 motivational-glow">
-          Building a <span className="italic text-accent-sage">smarter future</span> through data and empathy.
-        </h1>
-        <p className="text-base sm:text-xl md:text-2xl text-charcoal/60 leading-relaxed max-w-2xl mb-10 sm:mb-12">
-          I believe every data point tells a story. My mission is to translate those stories into intelligent systems that drive progress and inspire change.
-        </p>
-        <div className="flex flex-wrap gap-6">
-          <motion.a 
-            href="#work"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-charcoal text-bg rounded-full font-medium flex items-center gap-2 shadow-lg shadow-charcoal/10"
-          >
-            View My Work <ArrowRight size={18} />
-          </motion.a>
-          <div className="flex items-center gap-4">
-            <a href="https://github.com/Amanmeena0" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
-              <Github size={20} />
-            </a>
-            <a href="https://www.linkedin.com/in/aman-meena-11326a395" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
-              <Linkedin size={20} />
-            </a>  
-            <a href="mailto:meenaaman581@gmail.com" className="p-3 rounded-full bg-surface text-charcoal hover:text-accent-sage transition-colors shadow-sm">
-              <MailCheckIcon size={20} />
-            </a>
-          </div>
-        </div>
-      </motion.div>
+    <section
+      id="home"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+      style={{ background: '#050505' }}
+    >
+      {/* ── Full-viewport orbit canvas (layers 1–5) ── */}
+      <HeroOrbitCanvas onTechClick={scrollTo} />
 
-      {/* Decorative Name */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative mt-10 lg:absolute lg:mt-0 lg:right-4 xl:right-8 lg:top-1/2 lg:-translate-y-1/2 pointer-events-none select-none opacity-[0.03] lg:opacity-[0.04] hidden sm:flex justify-center lg:block z-0"
+      {/* Radial vignette — keeps text readable */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[5]"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 55% at 50% 50%, transparent 15%, #050505 100%)',
+        }}
+      />
+
+      {/* Bottom gradient fade */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-56 z-[5]"
+        style={{ background: 'linear-gradient(to bottom, transparent, #050505)' }}
+      />
+
+      {/* ── Text + UI layers (6–8) ── */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-6xl mx-auto pt-28 pb-24 select-none">
+
+        {/* Status badge */}
+        <motion.div {...fadeUp(0.05)} className="mb-8">
+          <div
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full"
+            style={{
+              background: 'rgba(255,107,61,0.08)',
+              border: '1px solid rgba(255,107,61,0.25)',
+              backdropFilter: 'blur(14px)',
+            }}
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF6B3D] opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FF6B3D]" />
+            </span>
+            <span className="text-[11px] font-mono text-[#FF8752] uppercase tracking-widest font-semibold flex items-center gap-1.5">
+              <Cpu className="w-3.5 h-3.5" />
+              Currently Building AI Products
+            </span>
+          </div>
+        </motion.div>
+
+        {/* "Hello, I'm" */}
+        <motion.div {...fadeUp(0.15)} className="mb-1">
+          <p className="font-mono text-[#8E8E8E] text-base sm:text-lg tracking-wider">
+            Hello, I'm
+          </p>
+        </motion.div>
+
+        {/* AMAN MEENA — cinematic focal point */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading font-extrabold uppercase leading-none tracking-[-0.01em] text-center glow-name w-full"
+          style={{ fontSize: 'clamp(48px, 9vw, 160px)', lineHeight: 1.0, whiteSpace: 'nowrap' }}
+        >
+          AMAN MEENA
+        </motion.h1>
+
+        {/* Role */}
+        <motion.h2
+          {...fadeUp(0.35)}
+          className="mt-5 font-heading font-semibold text-white"
+          style={{ fontSize: 'clamp(18px, 2.6vw, 36px)' }}
+        >
+          Full Stack Developer &amp; AI Engineer
+        </motion.h2>
+
+        {/* Description */}
+        <motion.p
+          {...fadeUp(0.44)}
+          className="mt-4 font-sans text-[#8E8E8E] leading-relaxed max-w-xl"
+          style={{ fontSize: 'clamp(14px, 1.3vw, 17px)' }}
+        >
+          Building production-grade AI systems, modern web apps, and scalable software.
+          Specialized in Next.js 15, RAG pipelines, Agentic AI, and high-performance
+          full-stack architectures.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div {...fadeUp(0.53)} className="mt-8 flex flex-wrap items-center justify-center gap-4">
+
+          {/* Primary — orange gradient */}
+          <button
+            id="hero-explore-btn"
+            onClick={() => scrollTo('projects')}
+            className="group relative flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-mono text-sm font-bold text-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            style={{
+              background: 'linear-gradient(135deg, #FF5C39, #FF7A3D)',
+              boxShadow: '0 0 22px rgba(255,107,61,0.35)',
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 0 36px rgba(255,107,61,0.65)';
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 0 22px rgba(255,107,61,0.35)';
+            }}
+          >
+            <span className="absolute inset-0 bg-white/15 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <Compass className="w-4 h-4 relative z-10 group-hover:rotate-45 transition-transform" />
+            <span className="relative z-10">Explore Universe</span>
+          </button>
+
+          {/* Secondary — transparent black + white border */}
+          <a
+            id="hero-resume-btn"
+            href="https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-mono text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1"
+            style={{
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              backdropFilter: 'blur(16px)',
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,107,61,0.45)';
+              (e.currentTarget as HTMLElement).style.background  = 'rgba(255,107,61,0.08)';
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.14)';
+              (e.currentTarget as HTMLElement).style.background  = 'rgba(255,255,255,0.03)';
+            }}
+          >
+            <Download className="w-4 h-4 text-[#FF8752]" />
+            Download Resume
+          </a>
+        </motion.div>
+
+        {/* Statistics */}
+        <motion.div
+          {...fadeUp(0.62)}
+          className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-lg"
+        >
+          {[
+            { value: '6+',  label: 'Projects',      color: '#FF6B3D' },
+            { value: '3+',  label: 'Internships',   color: '#FF8752' },
+            { value: '15+', label: 'Technologies',  color: '#F9C74F' },
+            { value: 'P2+', label: 'Accenture Top', color: '#FFFFFF' },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="flex flex-col items-center justify-center py-3.5 px-2 rounded-2xl"
+              style={{
+                background: 'rgba(255,255,255,0.025)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
+            >
+              <span className="text-2xl font-heading font-extrabold" style={{ color: s.color }}>
+                {s.value}
+              </span>
+              <span className="text-[11px] font-mono text-[#8E8E8E] mt-0.5">{s.label}</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div
+        onClick={() => scrollTo('about')}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 cursor-pointer group"
       >
-        <div className="text-[6rem] sm:text-[9rem] md:text-[12rem] lg:text-[15rem] xl:text-[20rem] font-serif [writing-mode:horizontal-tb] lg:[writing-mode:vertical-rl] text-charcoal leading-none">
-          安缦
-        </div>
-      </motion.div>
+        <ArrowDown className="w-4 h-4 text-[#FF6B3D] animate-bounce group-hover:translate-y-1 transition-transform" />
+        <span className="text-[10px] font-mono text-[#8E8E8E] uppercase tracking-widest">
+          Scroll to Explore
+        </span>
+      </div>
     </section>
   );
-}
+};
