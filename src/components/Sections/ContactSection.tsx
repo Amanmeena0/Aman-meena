@@ -99,7 +99,6 @@ export const ContactSection: React.FC = () => {
         >
           <Radio className="w-3.5 h-3.5 animate-pulse text-[#FF4D4D]" /> Final Station Destination
         </div>
-        </div>
         <h2 className="text-4xl sm:text-5xl font-heading font-bold text-white tracking-tight">
           Establish{' '}
           <span style={{ background: 'linear-gradient(135deg,#FF6B3D,#F9C74F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
