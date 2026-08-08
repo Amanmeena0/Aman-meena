@@ -6,9 +6,9 @@ export const PROJECTS: Project[] = [
     description: "A custom workshop pegboard catalog of tiny, free, and open-source games and tools. This project runs entirely on GitHub: issue templates serve as the submission form, approved issue comments act as the database, and GitHub Actions triggers static builds deployed directly to GitHub Pages.",
     why: "I built this to create an automated, community-driven workshop platform for hosting and showcasing tiny web-based tools and games.",
     tags: ["Next.js", "Typescript", "Tailwind CSS", "GitHub API", "GitHub Actions", "Web Development"],
-    link: "https://amanmeena0.github.io/tiny-island/",
-    github: "https://github.com/Amanmeena0/tiny-island",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/tiny-island"
+    link: "https://RexxLudwig.github.io/kojima/",
+    github: "https://github.com/RexxLudwig/tiny-island",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/Kojima"
   },
   {
     title: "Sukauto | AI Market Analysis Platform",
@@ -16,8 +16,8 @@ export const PROJECTS: Project[] = [
     why: "I built this to empower entrepreneurs and investors with data-driven insights, helping them make informed decisions in a rapidly changing market landscape.",
     tags: ["Python", "LangChain", "FastAPI", "Next.js", "LLM", "Hugging Face",] ,
     link: "https://market-scout-client.vercel.app/",
-    github: "https://github.com/Amanmeena0/Sukauto",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/Sukauto"
+    github: "https://github.com/RexxLudwig/Sukauto",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/Sukauto"
   },
   {
     title: "Talklytics | Real-time Conversational Engagement Detection System", 
@@ -25,8 +25,8 @@ export const PROJECTS: Project[] = [
     why: "I built this to help sales professionals improve their communication skills and increase their chances of success in sales interactions.",
     tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
     link: "https://conviciesense-mic.vercel.app/",
-    github: "https://github.com/Amanmeena0/Talklytics-update",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/Talklytics-update"
+    github: "https://github.com/RexxLudwig/Talklytics-update",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/Talklytics-update"
   },
   {
     title:"Botanical Merge | Blend Your Vision",
@@ -34,8 +34,8 @@ export const PROJECTS: Project[] = [
     why: "I built this to provide a creative platform for users to explore and blend their visual ideas in innovative ways.",
     tags: ["Python", "PyTorch", "TensorFlow", "NLP", "Data Visualization", "Web Scraping","Feature Engineering"],
     link: "https://botanical-merge.vercel.app/",
-    github: "https://github.com/Amanmeena0/Botanical_Merge",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/Botanical_Merge"
+    github: "https://github.com/RexxLudwig/Botanical_Merge",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/Botanical_Merge"
   },
   {
     title:"Bodo | Resume Builder and Guidance of the Interview",
@@ -43,8 +43,8 @@ export const PROJECTS: Project[] = [
     why: "I build this for my friends who were struggling to build their resumes. Additionally, the project also includes a guidance system for interviews to help users prepare for their interviews.",
     tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase", "Vercel"],
     link: "bodo-eight.vercel.app/",
-    github: "https://github.com/Amanmeena0/Bodo",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/Bodo"  
+    github: "https://github.com/RexxLudwig/Bodo",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/Bodo"  
   },
   {
     title: "SafeSphere | Crime Awareness Platform",
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     why: "I built this to enhance community safety by providing timely and relevant information about crime incidents and preventive measures.",
     tags: ["Python", "React.js", "Data Visualization", "GIS", "Data Analysis", "Web Development","Flask","SQLite"],
     link: "https://safe-sphere-ui.vercel.app",
-    github: "https://github.com/Amanmeena0/SafeSphere-client",
-    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/Amanmeena0/SafeSphere-client"
+    github: "https://github.com/RexxLudwig/SafeSphere-client",
+    image: "https://opengraph.githubassets.com/68f21bcaeab8159d46621d0e04c9904029248642391cd3754304752536c295b2/RexxLudwig/SafeSphere-client"
   },
 ];

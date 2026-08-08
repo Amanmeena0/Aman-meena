@@ -20,15 +20,6 @@ export const ProjectsSection: React.FC = () => {
     >
       {/* Sticky viewport — stays fixed while user scrolls through the tall section */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-start overflow-hidden pt-24 sm:pt-32 pb-10 px-4">
-        {/* Section header */}
-        <div className="text-center mb-6 md:mb-10 flex-shrink-0">
-          <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#8E8E8E] mb-2 sm:mb-3">
-            Selected Work
-          </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white tracking-tight">
-            Projects
-          </h2>
-        </div>
 
         {/* Carousel wrapper to ensure it fits and shrinks if needed */}
         <div className="flex-1 w-full flex items-center justify-center min-h-0 relative">

@@ -67,7 +67,7 @@ export const AboutSection: React.FC = () => {
 
           <div className="relative z-10 flex flex-col items-center text-center space-y-6">
             {/* Floating astronaut */}
-            <div className="relative w-44 h-44 flex items-center justify-center">
+            <div className="relative w-60 h-60 sm:w-64 sm:h-64 flex items-center justify-center">
               <div
                 className="absolute inset-0 rounded-full border border-dashed animate-spin-slow"
                 style={{ borderColor: 'rgba(255,107,61,0.3)' }}
@@ -79,19 +79,17 @@ export const AboutSection: React.FC = () => {
               <motion.div
                 animate={{ y: [-10, 10, -10], rotate: [-3, 3, -3] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative w-32 h-32 flex items-center justify-center rounded-full border border-white/10"
+                className="relative w-44 h-44 sm:w-48 sm:h-48 flex items-center justify-center rounded-full border border-white/10 overflow-hidden"
                 style={{
                   background: 'radial-gradient(circle at 30% 30%, rgba(255,107,61,0.15), rgba(249,199,79,0.08))',
                   boxShadow: '0 0 28px rgba(255,107,61,0.25)',
                 }}
               >
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
-                  <circle cx="12" cy="10" r="5" stroke="white" />
-                  <path d="M12 15c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z" stroke="white" />
-                  <path d="M9 10c0-1.66 1.34-3 3-3s3 1.34 3 3" stroke="#FF6B3D" />
-                  <circle cx="18" cy="6" r="1.5" fill="#F9C74F" />
-                  <circle cx="6"  cy="7" r="1"   fill="#FF8752" />
-                </svg>
+                <img
+                  src="/images/image.png"
+                  alt="Aman Meena"
+                  className="w-full h-full object-cover scale-[1.4] origin-[50%_30%]"
+                />
               </motion.div>
             </div>
 
@@ -115,7 +113,7 @@ export const AboutSection: React.FC = () => {
             </div>
             <div className="p-3 rounded-xl" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
               <div className="text-[#8E8E8E]">Primary Core</div>
-              <div className="text-[#F9C74F] font-bold mt-0.5">Next.js & Python AI</div>
+              <div className="text-[#F9C74F] font-bold mt-0.5">Python & AI</div>
             </div>
           </div>
         </motion.div>
