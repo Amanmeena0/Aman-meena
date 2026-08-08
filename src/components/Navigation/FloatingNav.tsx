@@ -1,42 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cpu, FileText, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const FloatingNav: React.FC = () => {
   const [scrolled, setScrolled]       = useState(false);
-  const [activeSection, setActive]    = useState('home');
   const [mobileOpen, setMobileOpen]   = useState(false);
+  const location = useLocation();
+  const activeSection = location.pathname === '/' ? 'home' : location.pathname.slice(1);
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 30);
-      const sections = ['home','about','skills','projects','experience','contact'];
-      const pos = window.scrollY + 200;
-      for (const s of sections) {
-        const el = document.getElementById(s);
-        if (el && pos >= el.offsetTop && pos < el.offsetTop + el.offsetHeight) {
-          setActive(s); break;
-        }
-      }
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home',       href: '#home' },
-    { name: 'About',      href: '#about' },
-    { name: 'Skills',     href: '#skills' },
-    { name: 'Projects',   href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact',    href: '#contact' },
+    { name: 'Home',       href: '/' },
+    { name: 'About',      href: '/about' },
+    { name: 'Experience', href: '/experience' },
+    { name: 'Projects',   href: '/projects' },
+    { name: 'Skills',     href: '/skills' },
+    { name: 'Contact',    href: '/contact' },
   ];
-
-  const goTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' });
-    setMobileOpen(false);
-  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 sm:pt-6">
@@ -58,9 +46,8 @@ export const FloatingNav: React.FC = () => {
         }
       >
         {/* Logo */}
-        <a
-          href="#home"
-          onClick={(e) => goTo(e, '#home')}
+        <Link
+          to="/"
           className="flex items-center gap-3 group cursor-pointer"
         >
           <div
@@ -88,7 +75,7 @@ export const FloatingNav: React.FC = () => {
               Digital Universe
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop nav pills */}
         <ul
@@ -100,12 +87,11 @@ export const FloatingNav: React.FC = () => {
           }}
         >
           {navItems.map((item) => {
-            const isActive = activeSection === item.href.slice(1);
+            const isActive = activeSection === (item.href === '/' ? 'home' : item.href.slice(1));
             return (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={(e) => goTo(e, item.href)}
+                <Link
+                  to={item.href}
                   className="relative px-4 py-1.5 text-xs font-mono font-medium rounded-full transition-all duration-300 block"
                   style={{ color: isActive ? '#FFFFFF' : '#8E8E8E' }}
                   onMouseEnter={(e) => { if (!isActive) (e.currentTarget as HTMLElement).style.color = '#C8C8C8'; }}
@@ -124,7 +110,7 @@ export const FloatingNav: React.FC = () => {
                     />
                   )}
                   <span className="relative z-10">{item.name}</span>
-                </a>
+                </Link>
               </li>
             );
           })}
@@ -185,10 +171,10 @@ export const FloatingNav: React.FC = () => {
             }}
           >
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                onClick={(e) => goTo(e, item.href)}
+                to={item.href}
+                onClick={() => setMobileOpen(false)}
                 className="text-sm font-mono py-2 border-b flex items-center justify-between transition-colors"
                 style={{
                   color: '#C8C8C8',
@@ -199,7 +185,7 @@ export const FloatingNav: React.FC = () => {
               >
                 <span>{item.name}</span>
                 <span className="text-xs text-[#8E8E8E]">➜</span>
-              </a>
+              </Link>
             ))}
             <a
               href="https://drive.google.com/file/d/1YK33pcxcN4ACycCYLdcpeQR_kL0IGkv8/view?usp=sharing"
@@ -216,3 +202,4 @@ export const FloatingNav: React.FC = () => {
     </header>
   );
 };
+

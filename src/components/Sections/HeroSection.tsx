@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Compass, Download, ArrowDown, Cpu } from 'lucide-react';
 import { HeroOrbitCanvas } from '../Space/HeroPlanet3D';
+import { useNavigate } from 'react-router-dom';
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
@@ -10,8 +11,7 @@ const fadeUp = (delay: number) => ({
 });
 
 export const HeroSection: React.FC = () => {
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
 
   return (
     <section
@@ -20,7 +20,7 @@ export const HeroSection: React.FC = () => {
       style={{ background: '#050505' }}
     >
       {/* ── Full-viewport orbit canvas (layers 1–5) ── */}
-      <HeroOrbitCanvas onTechClick={scrollTo} />
+      <HeroOrbitCanvas onTechClick={(id) => navigate(`/${id}`)} />
 
       {/* Radial vignette — keeps text readable */}
       <div
@@ -107,7 +107,7 @@ export const HeroSection: React.FC = () => {
           {/* Primary — orange gradient */}
           <button
             id="hero-explore-btn"
-            onClick={() => scrollTo('projects')}
+            onClick={() => navigate('/projects')}
             className="group relative flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-mono text-sm font-bold text-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
             style={{
               background: 'linear-gradient(135deg, #FF5C39, #FF7A3D)',
@@ -181,12 +181,12 @@ export const HeroSection: React.FC = () => {
 
       {/* Scroll indicator */}
       <div
-        onClick={() => scrollTo('about')}
+        onClick={() => navigate('/about')}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 cursor-pointer group"
       >
         <ArrowDown className="w-4 h-4 text-[#FF6B3D] animate-bounce group-hover:translate-y-1 transition-transform" />
         <span className="text-[10px] font-mono text-[#8E8E8E] uppercase tracking-widest">
-          Scroll to Explore
+          Explore More
         </span>
       </div>
     </section>
