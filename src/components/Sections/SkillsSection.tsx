@@ -24,7 +24,8 @@ const PLANETS: Planet[] = [
   // AI & LLMs
   { name: 'Agentic AI', iconLabel: 'AGI', category: 'ai', level: 94, experience: '2+ Years', gradient: 'from-purple-500 to-pink-500', glowColor: '#A855F7', details: ['Multi-Agent Systems', 'Autonomous Decision Workflows', 'Agent Orchestration Frameworks'] },
   { name: 'LangGraph', iconLabel: 'GRAPH', category: 'ai', level: 92, experience: '1.5+ Years', gradient: 'from-[#FF6B3D] to-[#F9C74F]', glowColor: '#FF6B3D', details: ['Multi-Node Reflection Cycles', 'Gap-Driven Agent Routing', 'State & Memory Management'] },
-  { name: 'LangChain & RAG', iconLabel: 'RAG', category: 'ai', level: 93, experience: '2+ Years', gradient: 'from-[#FF8752] to-[#FF6B3D]', glowColor: '#FF8752', details: ['Document Indexing (2K+ chunks)', 'Retrieval@3 Optimization', 'RAG-Chain Caching & Workers'] },
+  { name: 'LangChain', iconLabel: 'LangChain', category: 'ai', level: 93, experience: '2+ Years', gradient: 'from-[#FF8752] to-[#FF6B3D]', glowColor: '#FF8752', details: ['Document Indexing (2K+ chunks)', 'Retrieval@3 Optimization', 'RAG-Chain Caching & Workers'] },
+  { name: 'RAG', iconLabel: 'RAG', category: 'ai', level: 93, experience: '2+ Years', gradient: 'from-[#b1df17ff] to-[#FF6B3D]', glowColor: '#b1df17ff', details: ['Document Indexing (2K+ chunks)', 'Retrieval@3 Optimization', 'RAG-Chain Caching & Workers'] },
   { name: 'MCP Protocol', iconLabel: 'MCP', category: 'ai', level: 88, experience: '1+ Years', gradient: 'from-[#00E5FF] to-[#00B0FF]', glowColor: '#00E5FF', details: ['Model Context Protocol Servers', 'Multi-Source Data Integrations', 'Retry/Backoff & Rate Limiting'] },
   { name: 'Prompt Eng.', iconLabel: 'PRM', category: 'ai', level: 95, experience: '2+ Years', gradient: 'from-[#F9C74F] to-[#FF8752]', glowColor: '#F9C74F', details: ['Eval Set Benchmark Testing', 'AI Guardrails & Session Safety', 'Hallucination Minimization'] },
   { name: 'PyTorch', iconLabel: 'TORCH', category: 'ai', level: 85, experience: '1.5+ Years', gradient: 'from-[#EE4C2C] to-[#C73719]', glowColor: '#EE4C2C', details: ['Multimodal Deception Pipelines', 'Linguistic & Acoustic Models', 'Feature Extraction & Embeddings'] },
@@ -42,10 +43,18 @@ const PLANETS: Planet[] = [
   { name: 'GitHub CI/CD', iconLabel: 'CI', category: 'devops', level: 88, experience: '2+ Years', gradient: 'from-[#F05032] to-[#D83A1C]', glowColor: '#F05032', details: ['Automated Build & Test Pipelines', 'Version Control & Branching', 'Deployment Automation'] },
 
   // Developer Tools
-  { name: 'Developer Tools', iconLabel: 'TOOLS', category: 'tools', level: 92, experience: '3+ Years', gradient: 'from-[#C8C8C8] to-[#8E8E8E]', glowColor: '#C8C8C8', details: ['Git & VS Code Workflow', 'Postman API Testing', 'Neon Database & Odysseus'] },
-
+  { name: 'VS Code', iconLabel: 'IDE', category: 'tools', level: 95, experience: '3+ Years', gradient: 'from-[#007ACC] to-[#005C99]', glowColor: '#007ACC', details: ['Advanced Workflows', 'Extensions & Snippets', 'Integrated Terminal'] },
+  { name: 'Ollama', iconLabel: 'Model', category: 'tools', level: 85, experience: '1+ Year', gradient: 'from-[#69d404ff] to-[#D4A333]', glowColor: '#69d404ff', details: ['LLM Tracing & Debugging', 'Agent Evaluation', 'Prompt Playground'] },
+  { name: 'Postman', iconLabel: 'API', category: 'tools', level: 92, experience: '2.5+ Years', gradient: 'from-[#FF6C37] to-[#E55B29]', glowColor: '#FF6C37', details: ['API Endpoint Testing', 'Environment Variables', 'Automated Workflows'] },
+  { name: 'Neon', iconLabel: 'DB', category: 'tools', level: 88, experience: '1.5+ Years', gradient: 'from-[#00E599] to-[#00B377]', glowColor: '#00E599', details: ['Serverless Postgres', 'Branching & Snapshots', 'Connection Pooling'] },
+  { name: 'LangSmith', iconLabel: 'AI', category: 'tools', level: 85, experience: '1+ Year', gradient: 'from-[#F6C23E] to-[#D4A333]', glowColor: '#F6C23E', details: ['LLM Tracing & Debugging', 'Agent Evaluation', 'Prompt Playground'] },
+  
   // Specializations
   { name: 'System Design', iconLabel: 'LLD', category: 'specializations', level: 90, experience: '2+ Years', gradient: 'from-[#F9C74F] to-[#FF6B3D]', glowColor: '#F9C74F', details: ['LLD System Architecture', 'Database Schema Architecture', 'API Design & Agent Orchestration'] },
+  { name: 'LLM Evaluation', iconLabel: 'EVAL', category: 'specializations', level: 85, experience: '1+ Year', gradient: 'from-[#9B51E0] to-[#6F42C1]', glowColor: '#9B51E0', details: ['Automated Benchmarking', 'Quality Assurance', 'RAG Metrics'] },
+  { name: 'Prompt Engineering', iconLabel: 'PRMPT', category: 'specializations', level: 92, experience: '1.5+ Years', gradient: 'from-[#2D9CDB] to-[#2F80ED]', glowColor: '#2D9CDB', details: ['Few-Shot & CoT', 'Context Optimization', 'System Prompt Tuning'] },
+  { name: 'MCP Orchestration', iconLabel: 'MCP', category: 'specializations', level: 88, experience: '1+ Year', gradient: 'from-[#F2994A] to-[#EB5757]', glowColor: '#F2994A', details: ['Multi-Agent Systems', 'Tool Calling Architecture', 'Task Delegation'] },
+  { name: 'Multi-Model Usage', iconLabel: 'MM', category: 'specializations', level: 85, experience: '1+ Year', gradient: 'from-[#27AE60] to-[#219653]', glowColor: '#27AE60', details: ['Model Routing & Selection', 'Fallback Strategies', 'Cost Optimization'] },
 ];
 
 type FilterType = 'all' | 'languages' | 'ai' | 'backend' | 'devops' | 'tools' | 'specializations';
